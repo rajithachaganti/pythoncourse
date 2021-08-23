@@ -1,0 +1,128 @@
+Development project work in Agile/Scrum:
+===========================================
+Sprint planning meeting(2 days before sprint)
+
+9am-6pm office timings, 
+Flask project,
+    single app   app.py(urls configuration)  controller -> service -> dao
+	
+5 member team
+
+5point story given
+
+New joinee :
+------------
+KT Github account,email id,password,tools and technologies
+
+github clone ==> main-developement-feature branch
+             ==> main-development - forked repo
+
+main
+ - dev 
+	- feature_brach
+
+ 
+
+15-Mar-21 Monday:
+-----------------
+Jira ticket details : Open --> Convert to Inprogress state 
+
+21323_Implement messasge sending functionality for online transactions
+
+10AM - Standup call - Offshore team + Scrum Master - 
+11AM - 2.Analysis Functional/Technical  
+		- CRUD - Create     POST GET PUT DELETE
+			   - Retrieve
+			   - Update
+			   - Delete         
+		Confirm API Call with UI
+		UI Developer will start analysing his UI part
+		
+		API Call :
+		-----------
+		Request URL : http://localhost:8080/api/v1/sendmessage
+		Request Method : POST
+		Payload : {sender,receiver,cust_mobileno,message}
+		
+		Response : {'message':'Success','code':200}
+		           {'message':'Failure','code':403}
+		
+4PM - Design ready (Sequence Diagrams)
+Discuss with client or team lead if we have any doubts regarding requirement
+
+
+16-Mar-21 Tuesday:
+-----------------
+standup call - analysis,design completed  5 points - 10 Days 
+Development - 1. Map the url 
+			  2. Define function/class in controller layer,service,dao layers
+			  3. Through postman,prepare and send the api call 
+			  4. Implement the business logic 
+			  5. Parallelly write the unit test cases(Code coverage 90%) 
+			  6. Perform testing in local instance 
+			 
+
+17-Dec-20 Wednesday:
+---------------------
+Do code changes
+Flask project : app.py Requset URL,method mapping 
+				controller.py create new method
+						
+Postman : Configure API,and test the flow
+				
+pycharm project - deploy in local system > python app.py
+Configure API call in postman tool,or through swagger
+
+Start working on code changes at backend
+	- urls.py :Map the suffix url with respective views function  /api/v1/trunamechange ==> views.trunamechange
+	- views.py : function define  def trunamechange():    GET POST PUT DELETE
+								      print("Hello")
+								      dict      UI ->Controller -> Service -> DAO -> DB  
+
+Test the entire flow for the given requirement(Ticket)	in local system 							  
+unit test cases implement test code coverage
+
+
+"Local -> DEV -> Test -> UAT -> PROD"   feature branch ---> Build  --> Deployment --> DEV
+
+Feature branch - dev merge -->Code review, PR 
+
+
+23-Dec-20  Wednesday:
+----------------------
+push code to feature branch => github 
+feature branch -> build (Bamboo)-> Deploy to DEV instance (Bitbucket)
+PR : pull request to merge changes from feature branch to development branch
+     5 point - 5M 
+	 3 point - 3M
+PR Approves -> feature branch merge to development (SELF)
+
+25-Mar-21  Thursday:
+----------------------
+				==> development branch code deploy to TEST instance
+			   development to master
+Sprint planning meeting
+
+26-Mar-21  Friday:
+----------------------
+Demo - product owner,clients 
+
+Instances : Local DEV TEST UAT PROD
+
+Projects : DEV, ENH/REL  PROD SUPPORT
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+	
+

@@ -1,0 +1,2083 @@
+What is python:
+Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. 
+It uses English keywords frequently whereas other languages use punctuation, and it has fewer syntactic constructions than other languages.
+Following are some of the salient features of python −
+It supports functional and structured programming methods as well as OOP.
+It can be used as a scripting language or can be compiled to bytecode for building large applications.
+It provides very high-level dynamic data types and supports dynamic type checking.
+It supports automatic garbage collection.
+It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.
+================================================================================================================================================
+What are some design patterns you have implemented in ios?  
+==================================================================================================================================================
+What is the purpose of the PYTHONSTARTUP environment variable?
+PYTHONSTARTUP - It contains the path of an initialization file containing Python source code. It is executed every time you start the interpreter. 
+It is named as .pythonrc.py in Unix and it contains commands that load utilities or modify PYTHONPATH.
+====================================================================================================================================================
+Is python a case sensitive language?
+Yes!
+====================================================================================================================================================
+Python has five standard data types −
+Numbers
+String
+List
+Tuple
+Dictionary
+====================================================================================================================================================
+What are the built-in type does python provides?
+Mutable built-in types:
+List
+Sets
+Dictionaries
+Sets:
+A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. 
+Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+
+>>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+>>> fruit = set(basket)               # create a set without duplicates
+>>> fruit
+set(['orange', 'pear', 'apple', 'banana'])
+>>> 'orange' in fruit                 # fast membership testing
+True
+>>> 'crabgrass' in fruit
+False
+
+>>> # Demonstrate set operations on unique letters from two words
+...
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  # unique letters in a
+set(['a', 'r', 'b', 'c', 'd'])
+>>> a - b                              # letters in a but not in b
+set(['r', 'd', 'b'])
+>>> a | b                              # letters in either a or b
+set(['a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'])
+>>> a & b                              # letters in both a and b
+set(['a', 'c'])
+>>> a ^ b                              # letters in a or b but not both
+set(['r', 'd', 'b', 'm', 'z', 'l'])
+
+Immutable built-in types:
+Strings
+Tuples
+Numbers
+==================================================================================================================================================
+What is unittest in Python?
+A unit testing framework in Python is known as unittest.  It supports sharing of setups, automation testing, shutdown code for tests, aggregation of tests into collections etc.
+====================================================================================================================================================
+How will you convert a string to an int in python?
+int(x [,base]) - Converts x to an integer. base specifies the base if x is a string.
+How will you convert a string to a float in python?
+float(x) − Converts x to a floating-point number.
+How will you convert a object to a regular expression in python?
+repr(x) − Converts object x to an expression string.
+How will you convert a String to an object in python?
+eval(str) − Evaluates a string and returns an object.
+How will you convert a string to a tuple in python?
+tuple(s) − Converts s to a tuple.
+How will you convert a string to a list in python?
+list(s) − Converts s to a list.
+How will you convert a string to a set in python?
+set(s) − Converts s to a set.
+How will you create a dictionary using tuples in python?
+dict(d) − Creates a dictionary. d must be a sequence of (key,value) tuples.
+How will you convert a string to a frozen set in python?
+frozenset(s) − Converts s to a frozen set.
+How will you convert an integer to a character in python?
+chr(x) − Converts an integer to a character.
+How will you convert an integer to an unicode character in python?
+unichr(x) − Converts an integer to a Unicode character.
+
+Converting ASCII to int:
+ord('a')
+gives 97
+And back to a string:
+str(unichr(97))
+gives 'a'
+How will you convert an integer to hexadecimal string in python?
+hex(x) − Converts an integer to a hexadecimal string.
+How will you convert an integer to octal string in python?
+oct(x) − Converts an integer to an octal string.
+====================================================================================================================================================
+What is the purpose of ** operator?
+** Exponent − Performs exponential (power) calculation on operators. a**b = 10 to the power 20 if a = 10 and b = 20.
+What is the purpose of // operator?
+// Floor Division − The division of operands where the result is the quotient in which the digits after the decimal point are removed.
+====================================================================================================================================================
+Difference between is and == in python?
+== is for value equality. Use it when you would like to know if two objects have the same value.
+‘is’ is for reference equality. Use it when you would like to know if two references refer to the same object.
+is will return True if two variables point to the same object, == if the objects referred to by the variables are equal.
+
+>>> a = [1, 2, 3]
+>>> b = a
+>>> b is a
+True
+>>> b == a
+True
+>>> b = a[:]
+>>> b is a
+False
+>>> b == a
+True
+====================================================================================================================================================
+Python Format Specifiers:
+The %s specifier converts the object using str(), and %r converts it using repr().
+====================================================================================================================================================
+Pick a random item from a list or tuple?
+choice(seq) − Returns a random item from a list, tuple, or string.
+Pick a random item from a range?
+random.randrange ([start,] stop [,step]) − returns a randomly selected element from range(start, stop, step).
+How can you get a random number in python?
+random.random() − returns a random float r, such that 0 is less than or equal to r and r is less than 1.
+How will you set the starting value in generating random numbers?
+random.seed([x]) − Sets the integer starting value used in generating random numbers. Call this function before calling any other random module function. Returns None.
+How will you capitalizes first letter of string?
+capitalize() − Capitalizes first letter of string.
+How will you check in a string that all characters are alphanumeric?
+isalnum() − Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise.
+How will you check in a string that all characters are digits?
+isdigit() − Returns true if string contains only digits and false otherwise.
+How will you check in a string that all characters are in lowercase?
+islower() − Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise.
+How will you check in a string that all characters are in uppercase?
+isupper() − Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise.
+How will you check in a string that all characters are numerics?
+isnumeric() − Returns true if a unicode string contains only numeric characters and false otherwise.
+How will you check in a string that all characters are whitespaces?
+isspace() − Returns true if string contains only whitespace characters and false otherwise.
+How will you check in a string that it is properly titlecased?
+istitle() − Returns true if string is properly "titlecased" and false otherwise.
+How will you replaces all occurrences of old substring in string with new string?
+replace(old, new [, max]) − Replaces all occurrences of old in string with new or at most max occurrences if max given.
+How will you change case for all letters in string?
+swapcase() − Inverts case for all letters in string.
+How will you check in a string that all characters are decimal?
+isdecimal() − Returns true if a unicode string contains only decimal characters and false otherwise.
+What is the output of ['Hi!'] * 4?
+['Hi!', 'Hi!', 'Hi!', 'Hi!']
+cmp(x, y)
+Compare the two objects x and y and return an integer according to the outcome. The return value is negative if x < y, zero if x == y and strictly positive if x > y.
+How will you get the max valued item of a list?
+max(list) − Returns item from the list with max value.
+How will you get the min valued item of a list?
+min(list) − Returns item from the list with min value.
+How will you get the index of an object in a list?
+list.index(obj) − Returns the lowest index in list that obj appears.
+How will you insert an object at given index in a list?
+list.insert(index, obj) − Inserts object obj into list at offset index.
+How will you remove last object from a list?
+list.pop(obj=list[-1]) − Removes and returns last object or obj from list.
+
+====================================================================================================================================================
+http://zetcode.com/lang/python/itergener/
+Classes are simply blueprints to create objects from. The constructor is some code that are run every time you create an object. 
+Therefor it does'nt make sense to have two constructors. What happens is that the second over write the first.
+There is no function overloading in Python, meaning that you can't have multiple functions with the same name but different arguments.
+Function overloading: same function name, with arguments differing in their data type or their number.
+Function overriding: http://stackoverflow.com/questions/12764995/python-overriding-an-inherited-class-method
+
+In Python, constructors are defined by one or both of __new__ and __init__ methods. A new instance is created by calling the class as if it were a function, 
+which calls the __new__ and __init__ methods. If a constructor method is not defined in the class, the next one found in the class's Method Resolution Order will be called.
+
+In the typical case, only the __init__ method need be defined.
+Use __new__ when you need to control the creation of a new instance.
+Use __init__ when you need to control initialization of a new instance.
+http://agiliq.com/blog/2012/06/__new__-python/
+super() lets you avoid referring to the base class explicitly.
+
+====================================================================================================================================================
+
+Calsoft:
+1. pyc  file from windows copy into linux can u import?
+2. what are your roles and responsibilities?
+3. how to create service in linux, what is the diff between daemon and service
+http://www.comptechdoc.org/os/linux/howlinuxworks/linux_hlservices.html
+
+4. about 802.11n
+5. what was the server,did u use any proprietary python modules
+6. which was the latest modules you worked in python explain
+7. convert dict into list of tuples
+8. explain which ORM you are using for MSSQL
+Psycopg2 is the most popular PostgreSQL database adapter for the Python programming language
+
+import * only allowed at module level
+
+Difference between _init__ and __call__?
+http://stackoverflow.com/questions/9663562/what-is-difference-between-init-and-call-in-python
+
+what are generators?
+http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python
+https://wiki.python.org/moin/Generators
+
+generator
+	A function which returns an iterator. It looks like a normal function except that 
+	it contains yield statements for producing a series of values usable in a for-loop or that can be retrieved one at a time with the next() function. 
+	Each yield temporarily suspends processing, remembering the location execution state (including local variables and pending try-statements). 
+	When the generator resumes, it picks-up where it left-off (in contrast to functions which start fresh on every invocation)
+you can only iterate over them once. It's because they do not store all the values in memory, they generate the values on the fly:
+
+what are decorators?
+A function returning another function, usually applied as a function transformation using the @wrapper syntax. Common examples for decorators are classmethod() and staticmethod().
+
+http://thecodeship.com/patterns/guide-to-python-function-decorators/
+http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/
+
+def abc():
+ return 1
+val = abc ()  is valid call space is allowed
+Function Signature:
+a type signature or type annotation defines the inputs and outputs for a function, subroutine or method. A type signature includes the function's return type, the number of arguments, the types of arguments, or errors it may pass back.
+
+Q: Find size of python object?
+a=2, b=4
+import sys
+sys.getsizeof(a)
+Return the size of an object in bytes.
+
+Compiling python files:
+>>> import py_compile
+>>> py_compile.compile('Que.py')
+You can also automatically compile all files in a directory or directories using the compileall module.
+python -m compileall .
+
+Python Compiled or Interpreted?
+http://www.techdarting.com/2014/04/python-compiled-or-interpreted-language.html
+.pyc - This is the compiled bytecode. If you import a module, python will build a *.pyc file that contains the bytecode to make importing it again later easier (and faster).
+.pyc files contain byte code, which is what the Python interpreter compiles the source to. This code is then executed by Python's virtual machine.
+.pyo - optimized pyc file- This is a *.pyc file that was created while optimizations (-O) was on
+.pyd - Python script made as a Windows DLL
+
+When the Python interpreter is invoked with the -O flag, optimized code is generated and stored in ‘.pyo’ files. The optimizer currently doesn't help much; it only removes assert statements. When -O is used, all bytecode is optimized; .pyc files are ignored and .py files are compiled to optimized bytecode.
+A program doesn't run any faster when it is read from a ‘.pyc’ or ‘.pyo’ file than when it is read from a ‘.py’ file; the only thing that's faster about ‘.pyc’ or ‘.pyo’ files is the speed with which they are loaded.
+https://en.wikipedia.org/wiki/Bytecode
+Different flavours of python:
+http://www.techdarting.com/2014/03/why-different-flavors-of-python.html
+
+http://legacy.python.org/workshops/2002-02/papers/15/index.htm
+
+
+enumerate - Iterate over indices and items of a list
+alist = ['a1', 'a2', 'a3']
+for i, a in enumerate(alist):
+    print i, a
+Results:
+0 a1
+1 a2
+2 a3
+zip - Iterate over two lists in parallel
+alist = ['a1', 'a2', 'a3']
+blist = ['b1', 'b2', 'b3']
+
+for a, b in zip(alist, blist):
+    print a, b
+Results:
+a1 b1
+a2 b2
+a3 b3
+
+zip() in conjunction with the * operator can be used to unzip a list.
+>>> x = [1, 2, 3]
+>>> y = [4, 5, 6]
+>>> zipped = zip(x, y)
+>>> zipped
+[(1, 4), (2, 5), (3, 6)]
+>>> x2, y2 = zip(*zipped)
+
+classmethod(function)
+A class method receives the class as implicit first argument, just like an instance method receives the instance. To declare a class method, use this idiom:
+
+class C(object):
+	@classmethod
+	def f(cls, arg1, arg2, ...):
+    	...
+ staticmethod(function)
+
+http://stackoverflow.com/questions/12179271/python-classmethod-and-staticmethod-for-beginner
+
+	Return a static method for function.
+
+	A static method does not receive an implicit first argument. To declare a static method, use this idiom:
+
+	class C(object):
+    	@staticmethod
+    	def f(arg1, arg2, ...):
+        	...
+
+What is a docstring?
+docstring is the documentation string for a function. It can be accessed by
+function_name.__doc__
+
+it is declared as:
+
+>> def function_name():
+>>  """your docstring"""
+Writing documentation for your progams is a good habit and makes the code more understandable and reusable.
+
+
+What is map?
+
+map executes the function given as the first argument on all the elements of the iterable given as the second argument. If the function given takes in more than 1 arguments, then many iterables are given. 
+For eg:
+>>>  a='ayush'
+>>>  map(ord,a)
+....    [97, 121, 117, 115, 104]
+
+
+Shallow Copy Deep Copy:
+The difference between shallow and deep copying is only relevant for compound objects (objects that contain other objects, like lists or class instances):
+
+A shallow copy constructs a new compound object and then (to the extent possible) inserts references into it to the objects found in the original.
+A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original.
+
+>>> colours1 = ["red", "green"]
+>>> colours2 = colours1
+>>> colours2[1] = "blue"
+>>> colours1
+['red', 'blue']
+It's possible to completely copy shallow list structures with the slice operator without having any of the side effects, which we have described above:
+
+>>> list1 = ['a','b','c','d']
+>>> list2 = list1[:]
+>>> list2[1] = 'x'
+>>> print list2
+['a', 'x', 'c', 'd']
+>>> print list1
+['a', 'b', 'c', 'd']
+>>> 
+If you assign a new value to the 0th Element of one of the two lists, there will be no side effect. Problems arise, if you change one of the elements of the sublist.
+>>> lst1 = ['a','b',['ab','ba']]
+>>> lst2 = lst1[:]
+>>> lst2[0] = 'c'
+>>> lst2[2][1] = 'd'
+>>> print(lst1)
+['a', 'b', ['ab', 'd']]
+
+Assignment points to same objects
+copy.copy() - mutable refer to different ids as copy is created
+copy.copy() -  immutable refer to same ids
+copy.deepcopy() - 
+
+How to create a unicode in python:
+>>> p=u'jhdzlks'
+>>> p
+u'jhdzlks'
+>>> type(p)
+<type 'unicode'>
+>>> q='jhdzlks'
+>>> type(q)
+<type 'str'>
+Python Switch:
+def mySwitch(val):
+
+    return {
+        a: apple,
+        b: ball,
+......
+    }.get(val, 9)
+xrange(start, stop[, step])
+This function is very similar to range(), but returns an xrange object instead of a list
+
+
+Word Frequency:
+import operator
+from collections import Counter
+with open('parsurl.py') as f1:
+	# print '\n\n\n\n f1:',f1
+	lines = f1.readlines()
+	allwords= []
+	for line in lines:
+		# print ' line:',line
+		# print line.split()
+		allwords = allwords + line.split()
+	print allwords
+	# c=Counter(x.strip() for x in f1)
+	c= Counter(allwords)
+	sorted_x = sorted(c.items(), key=operator.itemgetter(1))
+	print sorted_x
+f.write(string) writes the contents of string to the file, returning None.
+>>>
+>>> f.write('This is a test\n')
+
+
+To write something other than a string, it needs to be converted to a string first:
+>>>
+>>> value = ('the answer', 42)
+>>> s = str(value)
+>>> f.write(s)
+
+
+f.tell() returns an integer giving the file object’s current position in the file, measured in bytes from the beginning of the file. To change the file object’s position, use f.seek(offset,from_what). The position is computed from adding offset to a reference point; the reference point is selected by the from_what argument. A from_what value of 0 measures from the beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. from_what can be omitted and defaults to 0, using the beginning of the file as the reference point.
+>>>
+>>> f = open('workfile', 'r+')
+>>> f.write('0123456789abcdef')
+>>> f.seek(5)      # Go to the 6th byte in the file
+>>> f.read(1)
+'5'
+>>> f.seek(-3, 2)  # Go to the 3rd byte before the end
+>>> f.read(1)
+'d'
+
+
+https://wiki.python.org/moin/HowTo/Sorting
+Abstract Class: A class defined as abstract can not be instantiated
+Abstract Method: when a method is marked as abstract, there should not be any implementation for the method abstract methods are meant to be overridden in subclasses
+Abstract classes need not have abstract methods
+if there is abstract methods whole class needs to be declared abstract
+classes that are not abstract are called concrete class
+A concrete class extending an abstract class should override all abstract methods
+
+Interfaces do not have any method implementation
+All methods in interface are public and abstract
+interfaces help multiple inheritance in Java
+
+
+
+
+
+
+OOPs Concepts:
+Polymorphism:
+The term polymorphism, in the OOP lingo, refers to the ability of an object to adapt the code to the type of the data it is processing.
+
+Polymorphism has two major applications in an OOP language. The first is that an object may provide different implementations of one of its methods depending on the type of the input parameters. The second is that code written for a given type of data may be used on data with a derived type, i.e. methods understand the class hierarchy of a type.
+
+In Python polymorphism is one of the key concepts, and we can say that it is a built-in feature.
+The polymorphism is the process of using an operator or function in different ways for different data input.
+class Animal:
+	def __init__(self, name):	# Constructor of the class
+    	self.name = name
+	def talk(self):          	# Abstract method, defined by convention only
+    	raise NotImplementedError("Subclass must implement abstract method")
+
+class Cat(Animal):
+	def talk(self):
+    	return 'Meow!'
+
+class Dog(Animal):
+	def talk(self):
+    	return 'Woof! Woof!'
+
+animals = [Cat('Missy'),
+       	Cat('Mr. Mistoffelees'),
+       	Dog('Lassie')]
+
+for animal in animals:
+	print animal.name + ': ' + animal.talk()
+
+# prints the following:
+#
+# Missy: Meow!
+# Mr. Mistoffelees: Meow!
+# Lassie: Woof! Woof!
+NewClassVsClassicClass:
+The minor syntactic difference is that New Style Classes happen to inherit from object.
+New Style classes can use descriptors (including __slots__), and Old Style classes cannot. Normally, this is just an advantage for New Style Classes, but it can affect lookup. An old-style class will always find an attribute on an instance before it looks in the hierarchy.
+Some features, such as the property protocol, are only available with new style classes
+The inability to use super with old-style classes should be sufficient motivation to use new-style classes.
+
+
+object in class definition:
+	Python's original rendition of a class was broken in many serious ways. By the time this fault was recognized it was already too late, and they had to support it. In order to fix the problem, they needed some "new class" style so that the "old classes" would keep working but you can use the new more correct version.
+	They decided that they would use a word "object", to be the "class" that you inherit from to make a class. It is confusing, but a class inherits from the class named "object" to make a class but it's not an object really its a class, but don't forget to inherit from object.
+the difference between new-style classes and old-style classes is that new-style classes always inherit from either object class or from any other class.
+Abstract Classes in Python:
+
+
+Use abc module of python to create abstract classes.
+
+from abc import ABCMeta, abstractmethod
+
+class Abstract(ABC):
+	__metaclass__ = ABCMeta
+
+	@abstractmethod
+	def foo(self):
+    	pass
+
+Abstract()
+>>> TypeError: Can not instantiate abstract class Abstract with abstract methods foo
+
+class B(Abstract):
+	pass
+
+B()
+>>> TypeError: Can not instantiate abstract class B with abstract methods foo
+
+
+
+Descriptor:
+a descriptor is an object attribute with “binding behavior”, one whose attribute access has been overridden by methods in the descriptor protocol. Those methods are __get__(), __set__(), and __delete__(). If any of those methods are defined for an object, it is said to be a descriptor.
+If you assign descriptors to a class then attribute lookups and assignments will call __get__ and respectively __set__ on the descriptor.
+
+In other programming languages, descriptors are referred to as setter and getter
+class RevealAccess(object):
+	"""A data descriptor that sets and returns values
+   	normally and prints a message logging their access.
+	"""
+
+	def __init__(self, initval=None, name='var'):
+    	self.val = initval
+    	self.name = name
+
+	def __get__(self, obj, objtype):
+    	print 'Retrieving', self.name
+    	return self.val
+
+	def __set__(self, obj, val):
+    	print 'Updating', self.name
+    	self.val = val
+
+>>> class MyClass(object):
+	x = RevealAccess(10, 'var "x"')
+	y = 5
+
+>>> m = MyClass()
+>>> m.x
+Retrieving var "x"
+10
+>>> m.x = 20
+Updating var "x"
+>>> m.x
+Retrieving var "x"
+20
+>>> m.y
+5
+
+class Descriptor(object):
+
+	def __init__(self):
+    	self._name = ''
+
+	def __get__(self, instance, owner):
+    	print "Getting: %s" % self._name
+    	return self._name
+
+	def __set__(self, instance, name):
+    	print "Setting: %s" % name
+    	self._name = name.title()
+
+	def __delete__(self, instance):
+    	print "Deleting: %s" %self._name
+    	del self._name
+
+class Person(object):
+	name = Descriptor()
+
+Use this code and see the output:
+
+>>> user = Person()
+>>> user.name = 'john smith'
+Setting: john smith
+>>> user.name
+Getting: John Smith
+'John Smith'
+>>> del user.name
+Deleting: John Smith
+
+What is the output of the following code:
+
+class Parent(object):
+    x = 1
+
+class Child1(Parent):
+    pass
+
+class Child2(Parent):
+    pass
+
+print Parent.x, Child1.x, Child2.x
+Child1.x = 2
+print Parent.x, Child1.x, Child2.x
+Parent.x = 3
+print Parent.x, Child1.x, Child2.x
+The output of the above code will be:
+
+1 1 1
+1 2 1
+3 2 3
+What confuses or surprises many about this is that the last line of output is 3 2 3 rather than 3 2 1. Why does changing the value of Parent.x also change the value of Child2.x, but at the same time not change the value of Child1.x?
+
+The key to the answer is that, in Python, class variables are internally handled as dictionaries. If a variable name is not found in the dictionary of the current class, the class hierarchy (i.e., its parent classes) are searched until the referenced variable name is found (if the referenced variable name is not found in the class itself or anywhere in its hierarchy, an AttributeError occurs).
+
+Therefore, setting x = 1 in the Parent class makes the class variable x (with a value of 1) referenceable in that class and any of its children. That’s why the first print statement outputs 1 1 1.
+
+Subsequently, if any of its child classes overrides that value (for example, when we execute the statement Child1.x = 2), then the value is changed in that child only. That’s why the second print statement outputs 1 2 1.
+
+Finally, if the value is then changed in the Parent (for example, when we execute the statement Parent.x = 3), that change is reflected also by any children that have not yet overridden the value (which in this case would be Child2). That’s why the third print statement outputs 3 2 3.
+
+In Python 2, the output of the above code will be:
+
+5/2 = 2
+5.0/2 = 2.5
+5//2 = 2
+5.0//2.0 = 2.0
+By default, Python 2 automatically performs integer arithmetic if both operands are integers. As a result, 5/2 yields 2, while 5./2 yields 2.5.
+
+Note that you can override this behavior in Python 2 by adding the following import:
+
+from __future__ import division
+Also note that the “double-slash” (//) operator will always perform integer division, regardless of the operand types. That’s why 5.0//2.0 yields 2.0 even in Python 2.
+What will be output?
+list = ['a', 'b', 'c', 'd', 'e']
+print list[10:]
+The above code will output [], and will not result in an IndexError.
+As one would expect, attempting to access a member of a list using an index that exceeds the number of members (e.g., attempting to access list[10] in the list above) results in an IndexError. However, attempting to access a slice of a list at a starting index that exceeds the number of members in the list will not result in an IndexError and will simply return an empty list.
+
+What is the output?
+1. list = [ [ ] ] * 5
+2. list  # output?
+3. list[0].append(10)
+4. list  # output?
+5. list[1].append(20)
+6. list  # output?
+7. list.append(30)
+8. list  # output?
+The output will be as follows:
+
+[[], [], [], [], []]
+[[10], [10], [10], [10], [10]]
+[[10, 20], [10, 20], [10, 20], [10, 20], [10, 20]]
+[[10, 20], [10, 20], [10, 20], [10, 20], [10, 20], 30]
+Here’s why:
+
+The first line of output is presumably intuitive and easy to understand; i.e., list = [ [ ] ] * 5 simply creates a list of 5 lists.
+
+However, the key thing to understand here is that the statement list = [ [ ] ] * 5 does NOT create a list containing 5 distinct lists; rather, it creates a list of 5 references to the same list. With this understanding, we can better understand the rest of the output.
+
+Given a list[0].append(10) appends 10 to the first list. But since all 5 lists refer to the same list, the output is: [[10], [10], [10], [10], [10]].
+
+Similarly, list[1].append(20) appends 20 to the second list. But again, since all 5 lists refer to the same list, the output is now: [[10, 20], [10, 20], [10, 20], [10, 20], [10, 20]].
+Given a list of N numbers, use a single list comprehension to produce a new list that only contains those values that are:
+(a) even numbers, and
+(b) from elements in the original list that had even indices
+
+For example, if list[2] contains a value that is even, that value should be included in the new list, since it is also at an even index (i.e., 2) in the original list. However, if list[3] contains an even number, that number should not be included in the new list since it is at an odd index (i.e., 3) in the original list.
+List[::2] will result list having elements at indices 0,2,4,6… in original list
+A simple solution to this problem would be as follows
+
+[x for x in list[::2] if x%2 == 0]
+For example, given the following list:
+
+#        0   1   2   3    4    5    6    7    8
+list = [ 1 , 3 , 5 , 8 , 10 , 13 , 18 , 36 , 78 ]
+the list comprehension [x for x in list[::2] if x%2 == 0] will evaluate to:
+
+[10, 18, 78]
+
+
+virtual machine:
+	A computer defined entirely in software. Python’s virtual machine executes the bytecode emitted by the bytecode compiler.
+
+Static typing is where the type is bound to the variable. Types are checked at compile time.
+This in practice means that you as the programmer must specify what type each variable is. Example: Java, C, C++
+
+Dynamic typing is where the type is bound to the value. Types are checked at run time.
+Ex: Python, Perl
+
+
+
+
+
+Python Design Patterns:
+why py programmers rarely talk about design patterns:
+Built-in language features
+some are provided by frameworks
+We avoid big applications
+Design patterns: Elements of reusable object-oriented software
+Object-oriented design patterns are specifically about putting the big pieces of an application together:
+Classes
+Objects
+References
+How can a language feature replace a pattern:
+Program to an interface, not an implementation
+There are
+5 Creational patterns
+7 structural patterns
+11 behavioural patterns
+5 Creational patterns
+Singleton Pattern
+Singleton pattern provides a mechanism to limit the number of the instances of the class to one.
+Singleton can be seen as a more elegant solution to global variable because actual data is hidden behind Singleton class interface.
+Singletons are kind of an alternative to global variables
+using global variables is bad, because you can never switch something dynamic
+always make callers actually invoke a function to get your singleton; minimally
+
+
+_singleton = MyClass()
+def get_singleton():
+	return _singleton
+3. Note that real singleton pattern is supposed to let the caller provide a subclass
+Prototype: copy module can introspect and make a copy of an object
+7 structural patterns
+Adapter:
+Wraps one class so that it behaves like another class
+Bridge:
+Composite:
+Facade:
+Flyweight
+Proxy
+11 behavioural patterns:
+chain of responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+observer
+state
+
+http://preshing.com/20110920/the-python-with-statement-by-example/
+
+Reading large text files:
+with open("log.txt") as infile:
+    for line in infile:
+        do_something_with(line)
+
+Class and Instance Variables:
+Generally speaking, instance variables are for data unique to each instance and class variables are for attributes and methods shared by all instances of the class:
+
+class Dog:
+
+    kind = 'canine'         # class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.kind                  # shared by all dogs
+'canine'
+>>> e.kind                  # shared by all dogs
+'canine'
+>>> d.name                  # unique to d
+'Fido'
+>>> e.name                  # unique to e
+'Buddy'
+
+
+The subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use this to integrate external programs into your Python code.
+If you want to call an external program (especially one not written in Python) use subprocess.
+
+
+The multiprocessing module lets you divide tasks written in python over multiple processes to help improve performance. It provides an API very similar to the threading module; it provides methods to share data across the processes it creates, and makes the task of managing multiple processes to run Python code (much) easier. In other words, multiprocessing lets you take advantage of multiple processes to get your tasks done faster by executing code in parallel.
+
+Running Linux commands in python:
+import os
+retvalue = os.system("ps -p 2993 -o time --no-headers")
+print retvalue
+What gets returned is the return value of executing this command. What you see in while executing it directly is the output of the command in stdout. That 0 is returned means, there was no error in execution.
+import subprocess as sub
+p = sub.Popen('your command',stdout=sub.PIPE,stderr=sub.PIPE)
+output, errors = p.communicate()
+print output
+If you're only interested in the output from the process, it's easiest to use subprocess' check_output function:
+
+
+output = subprocess.check_output(["command", "arg1", "arg2"]);
+subprocess.call(['ping', '-c', '3', address])
+
+
+
+
+
+
+Coupling - A measure of how much a module (package, class, method) relies on other modules. It is desirable to reduce coupling, or reduce the amount that a given module relies on the other modules of a system.
+
+Cohesion - A measure of how closely related the members (classes, methods, functionality within a method) of a module are to the other members of the same module. It is desirable to increase cohesion as that indicates that a module has a very specific task and does only that task.
+A MonkeyPatch is a piece of Python code which extends or modifies other code at runtime (typically at startup).
+A simple example looks like this:
+
+from SomeOtherProduct.SomeModule import SomeClass
+
+def speak(self):
+    return "ook ook eee eee eee!"
+
+SomeClass.speak = speak
+AKamai:
+What are metaclasses:
+http://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/
+
+
+
+
+
+What is Python really?
+Make comparisons to other technologies in your answer
+Answer
+Python is an interpreted language. Unlike languages like C and its variants, Python does not need to be compiled before it is run. Other interpreted languages include PHP and Ruby.
+Benefits of Python: Python is a programming language with objects, modules, threads, exceptions and automatic memory management. The benefits of pythons are that it is simple and easy, portable, extensible, build-in data structure and it is an open source.
+Python is dynamically typed, this means that you don't need to state the types of variables when you declare them or anything like that. You can do things like x=111 and then x="I'm a string" without error
+Python is well suited to object orientated programming in that it allows the definition of classes along with composition and inheritance. Python does not have access specifiers (like C++'s public, private), the justification for this point is given as "we are all adults here"
+in Python, functions are first-class objects. This means that they can be assigned to variables, returned from other functions and passed into functions. Classes are also first class objects
+Writing Python code is quick but running it is often slower than compiled languages. Fortunately, Python allows the inclusion of C based extensions so bottlenecks can be optimised away and often are. The numpy package is a good example of this, it's really quite quick because a lot of the number crunching it does isn't actually done by Python
+Python finds use in many spheres - web applications, automation, scientific modelling, big data applications and many more. It's also often used as "glue" code to get other languages and components to play nice.
+Python makes difficult things easy so programmers can focus on overriding algorithms and structures rather than nitty-gritty low level details.
+def print_directory_contents(sPath):
+    """
+    This function takes the name of a directory 
+    and prints out the paths files within that 
+    directory as well as any files contained in 
+    contained directories. 
+
+    This function is similar to os.walk. Please don't
+    use os.walk in your answer. We are interested in your 
+    ability to work with nested structures. 
+    """
+Answer
+def print_directory_contents(sPath):
+    import os                                       
+    for sChild in os.listdir(sPath):                
+        sChildPath = os.path.join(sPath,sChild)
+        if os.path.isdir(sChildPath):
+            print_directory_contents(sChildPath)
+        else:
+            print(sChildPath)
+be consistent with your naming conventions. If there is a naming convention evident in any sample code, stick to it. Even if it is not the naming convention you usually use
+recursive functions need to recurse and terminate. Make sure you understand how this happens so that you avoid bottomless callstacks
+we use the os module for interacting with the operating system in a way that is cross platform. You could say sChildPath = sPath + '/' + sChild but that wouldn't work on windows
+Question 3:
+Looking at the below code, write down the final values of A0, A1, ...An.
+A0 = dict(zip(('a','b','c','d','e'),(1,2,3,4,5)))
+A1 = range(10)
+A2 = sorted([i for i in A1 if i in A0])
+A3 = sorted([A0[s] for s in A0])
+A4 = [i for i in A1 if i in A3]
+A5 = {i:i*i for i in A1}
+A6 = [[i,i*i] for i in A1]
+Answer
+A0 = {'a': 1, 'c': 3, 'b': 2, 'e': 5, 'd': 4}  # the order may vary
+A1 = range(0, 10) # or [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] in python 2
+A2 = []
+A3 = [1, 3, 2, 5, 4]
+A4 = [1, 2, 3, 4, 5]
+A5 = {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+A6 = [[0, 0], [1, 1], [2, 4], [3, 9], [4, 16], [5, 25], [6, 36], [7, 49], [8, 64], [9, 81]]
+Problems of this kind can be solved by defining critical sections with lock objects. These sections will be treated atomically, i.e. during the execution of such a section a thread will not be interrupted or put to sleep. 
+The methode thread.allocate_lock is used to create a new lock object:
+
+lock_object = thread.allocate_lock() 
+
+The beginning of a critical section is tagged with lock_object.acquire() and the end with lock_object.release(). 
+The solution with locks looks like this:
+from thread import start_new_thread, allocate_lock
+num_threads = 0
+thread_started = False
+lock = allocate_lock()
+def heron(a):
+    global num_threads, thread_started
+    lock.acquire()
+    num_threads += 1
+    thread_started = True
+    lock.release()
+    
+    ...
+
+    lock.acquire()
+    num_threads -= 1
+    lock.release()
+    return new
+
+start_new_thread(heron,(99,))
+start_new_thread(heron,(999,))
+start_new_thread(heron,(1733,))
+
+while not thread_started:
+    pass
+while num_threads > 0:
+    pass
+
+Question 4
+Python and multi-threading. Is it a good idea? List some ways to get some Python code to run in a parallel way.
+Answer
+Python doesn't allow multi-threading in the truest sense of the word. It has a multi-threading package but if you want to multi-thread to speed your code up, 
+then it's usually not a good idea to use it. Python has a construct called the Global Interpreter Lock (GIL). 
+The GIL makes sure that only one of your 'threads' can execute at any one time. A thread acquires the GIL, does a little work, then passes the GIL onto the next thread. This happens very quickly so to the human eye it may seem like your threads are executing in parallel, but they are really just taking turns using the same CPU core. All this GIL passing adds overhead to execution. This means that if you want to make your code run faster then using the threading package often isn't a good idea.
+There are reasons to use Python's threading package. If you want to run some things simultaneously, and efficiency is not a concern, then it's totally fine and convenient. Or if you are running code that needs to wait for something (like some IO) then it could make a lot of sense. But the threading library wont let you use extra CPU cores.
+Multi-threading can be outsourced to the operating system (by doing multi-processing), some external application that calls your Python code (eg, Spark or Hadoop), or some code that your Python code calls (eg: you could have your Python code call a C function that does the expensive multi-threaded stuff).
+Question 5
+How do you keep track of different versions of your code?
+Answer:
+Version control! At this point, you should act excited and tell them how you even use Git (or whatever is your favorite) to keep track of correspondence with Granny. Git is my preferred version control system, but there are others, for example subversion.
+Why this is important:
+Because code without version control is like coffee without a cup. Sometimes we need to write once-off throw away scripts and that's ok, but if you are dealing with any significant amount of code, a version control system will be a benefit. Version Control helps with keeping track of who made what change to the code base; finding out when bugs were introduced to the code; keeping track of versions and releases of your software; distributing the source code amongst team members; deployment and certain automations. It allows you to roll your code back to before you broke it which is great on its own. Lots of stuff. It's just great.
+Question 6
+What does this code output:
+def f(x,l=[]):
+    for i in range(x):
+        l.append(i*i)
+    print(l) 
+
+f(2)
+f(3,[3,2,1])
+f(3)
+
+
+Answer
+[0, 1]
+[3, 2, 1, 0, 1, 4]
+[0, 1, 0, 1, 4]
+
+
+Hu?
+The first function call should be fairly obvious, the loop appends 0 and then 1 to the empty list,l. l is a name for a variable that points to a list stored in memory. The second call starts off by creating a new list in a new block of memory. l then refers to this new list. It then appends 0, 1 and 4 to this new list. So that's great. The third function call is the weird one. It uses the original list stored in the original memory block. That is why it starts off with 0 and 1.
+Try this out if you don't understand:
+l_mem = []
+
+l = l_mem           # the first call
+for i in range(2):
+    l.append(i*i)
+
+print(l)            # [0, 1]
+
+l = [3,2,1]         # the second call
+for i in range(3):
+    l.append(i*i)
+
+print(l)            # [3, 2, 1, 0, 1, 4]
+
+l = l_mem           # the third call
+for i in range(3):
+    l.append(i*i)
+
+print(l)            # [0, 1, 0, 1, 4]
+Question 7
+What is monkey patching and is it ever a good idea?
+Answer
+Monkey patching is changing the behaviour of a function or object after it has already been defined. For example:
+import datetime
+datetime.datetime.now = lambda: datetime.datetime(2012, 12, 12)
+
+
+Most of the time it's a pretty terrible idea - it is usually best if things act in a well-defined way. One reason to monkey patch would be in testing. The mock package is very useful to this end.
+Why does this matter?
+It shows that you understand a bit about methodologies in unit testing. Your mention of monkey avoidance will show that you aren't one of those coders who favor fancy code over maintainable code
+Question 8
+What does this stuff mean: *args, **kwargs? And why would we use it?
+Answer
+Use *args when we aren't sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. **kwargs is used when we dont know hHere is a little illustration:
+def f(*args,**kwargs): print(args, kwargs)
+
+l = [1,2,3]
+t = (4,5,6)
+d = {'a':7,'b':8,'c':9}
+
+f()
+f(1,2,3)                    # (1, 2, 3) {}
+f(1,2,3,"groovy")           # (1, 2, 3, 'groovy') {}
+f(a=1,b=2,c=3)              # () {'a': 1, 'c': 3, 'b': 2}
+f(a=1,b=2,c=3,zzz="hi")     # () {'a': 1, 'c': 3, 'b': 2, 'zzz': 'hi'}
+f(1,2,3,a=1,b=2,c=3)        # (1, 2, 3) {'a': 1, 'c': 3, 'b': 2}
+
+f(*l,**d)                   # (1, 2, 3) {'a': 7, 'c': 9, 'b': 8}
+f(*t,**d)                   # (4, 5, 6) {'a': 7, 'c': 9, 'b': 8}
+f(1,2,*t)                   # (1, 2, 4, 5, 6) {}
+f(q="winning",**d)          # () {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+f(1,2,*t,q="winning",**d)   # (1, 2, 4, 5, 6) {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+
+def f2(arg1,arg2,*args,**kwargs): print(arg1,arg2, args, kwargs)
+
+f2(1,2,3)                       # 1 2 (3,) {}
+f2(1,2,3,"groovy")              # 1 2 (3, 'groovy') {}
+f2(arg1=1,arg2=2,c=3)           # 1 2 () {'c': 3}
+f2(arg1=1,arg2=2,c=3,zzz="hi")  # 1 2 () {'c': 3, 'zzz': 'hi'}
+f2(1,2,3,a=1,b=2,c=3)           # 1 2 (3,) {'a': 1, 'c': 3, 'b': 2}
+
+f2(*l,**d)                   # 1 2 (3,) {'a': 7, 'c': 9, 'b': 8}
+f2(*t,**d)                   # 4 5 (6,) {'a': 7, 'c': 9, 'b': 8}
+f2(1,2,*t)                   # 1 2 (4, 5, 6) {}
+f2(1,1,q="winning",**d)      # 1 1 () {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+f2(1,2,*t,q="winning",**d)   # 1 2 (4, 5, 6) {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+ow many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use *bob and **billy but that would not be wise.
+Here is a little illustration:
+def f(*args,**kwargs): print(args, kwargs)
+
+l = [1,2,3]
+t = (4,5,6)
+d = {'a':7,'b':8,'c':9}
+
+f()
+f(1,2,3)                    # (1, 2, 3) {}
+f(1,2,3,"groovy")           # (1, 2, 3, 'groovy') {}
+f(a=1,b=2,c=3)              # () {'a': 1, 'c': 3, 'b': 2}
+f(a=1,b=2,c=3,zzz="hi")     # () {'a': 1, 'c': 3, 'b': 2, 'zzz': 'hi'}
+f(1,2,3,a=1,b=2,c=3)        # (1, 2, 3) {'a': 1, 'c': 3, 'b': 2}
+
+f(*l,**d)                   # (1, 2, 3) {'a': 7, 'c': 9, 'b': 8}
+f(*t,**d)                   # (4, 5, 6) {'a': 7, 'c': 9, 'b': 8}
+f(1,2,*t)                   # (1, 2, 4, 5, 6) {}
+f(q="winning",**d)          # () {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+f(1,2,*t,q="winning",**d)   # (1, 2, 4, 5, 6) {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+
+def f2(arg1,arg2,*args,**kwargs): print(arg1,arg2, args, kwargs)
+
+f2(1,2,3)                       # 1 2 (3,) {}
+f2(1,2,3,"groovy")              # 1 2 (3, 'groovy') {}
+f2(arg1=1,arg2=2,c=3)           # 1 2 () {'c': 3}
+f2(arg1=1,arg2=2,c=3,zzz="hi")  # 1 2 () {'c': 3, 'zzz': 'hi'}
+f2(1,2,3,a=1,b=2,c=3)           # 1 2 (3,) {'a': 1, 'c': 3, 'b': 2}
+
+f2(*l,**d)                   # 1 2 (3,) {'a': 7, 'c': 9, 'b': 8}
+f2(*t,**d)                   # 4 5 (6,) {'a': 7, 'c': 9, 'b': 8}
+f2(1,2,*t)                   # 1 2 (4, 5, 6) {}
+f2(1,1,q="winning",**d)      # 1 1 () {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+f2(1,2,*t,q="winning",**d)   # 1 2 (4, 5, 6) {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+What do these mean to you: @classmethod, @staticmethod, @property?
+Answer Background knowledge
+These are decorators. A decorator is a special kind of function that either takes a function and returns a function, or takes a class and returns a class. The @ symbol is just syntactic sugar that allows you to decorate something in a way that's easy to read.
+@my_decorator
+def my_func(stuff):
+    do_things
+Is equivalent to
+def my_func(stuff):
+    do_things
+my_func = my_decorator(my_func)
+def time_this(original_function):                            # 1
+    def new_function(*args,**kwargs):                        # 2
+        before = datetime.datetime.now()                     # 3
+        x = original_function(*args,**kwargs)                # 4
+        after = datetime.datetime.now()                      # 5
+        print "Elapsed Time = {0}".format(after-before)      # 6
+        return x                                             # 7
+    return new_function
+     
+@time_this
+def func_b(stuff):
+    do_important_things_4()
+    do_important_things_5()
+    do_important_things_6()
+
+Python has a few built in decorators that are worth knowing about, for example staticmethod and classmethod.
+Question 13
+Place the following functions below in order of their efficiency. They all take in a list of numbers between 0 and 1. The list can be quite long. An example input list would be[random.random() for i in range(100000)]. How would you prove that your answer is correct?
+def f1(lIn):
+    l1 = sorted(lIn)
+    l2 = [i for i in l1 if i<0.5]
+    return [i*i for i in l2]
+
+def f2(lIn):
+    l1 = [i for i in lIn if i<0.5]
+    l2 = sorted(l1)
+    return [i*i for i in l2]
+
+def f3(lIn):
+    l1 = [i*i for i in lIn]
+    l2 = sorted(l1)
+    return [i for i in l1 if i<(0.5*0.5)]
+
+
+Answer
+Most to least efficient: f2, f1, f3. To prove that this is the case, you would want to profile your code. Python has a lovely profiling package that should do the trick.
+import cProfile
+lIn = [random.random() for i in range(100000)]
+cProfile.run('f1(lIn)')
+cProfile.run('f2(lIn)')
+cProfile.run('f3(lIn)')
+Method Resolution Order:
+Every class in Python is derived from the class object. It is the most base type in Python. So technically, all other class, either built-in or user-defines, are derived classes and all objects are instances of object class.
+
+>>> issubclass(list,object)
+True
+>>> isinstance(5.5,object)
+True
+>>> isinstance("Hello",object)
+True
+In the multiple inheritance scenario, any specified attribute is searched first in the current class. If not found, the search continues into parent classes in depth-first, left-right fashion without searching same class twice.
+class X: pass
+class Y: pass
+class Z: pass
+
+class A(X,Y): pass
+class B(Y,Z): pass
+
+class M(B,A,Z): pass
+
+print(M.mro())
+Classic classes used a simple MRO scheme: when looking up a method, base classes were searched using a simple depth-first left-to-right scheme. The first matching object found during this search would be returned. For example, consider these classes:
+class A:
+  def save(self): pass
+
+class B(A): pass
+
+class C:
+  def save(self): pass
+
+class D(B, C): pass
+If we created an instance x of class D, the classic method resolution order would order the classes as D, B, A, C. Thus, a search for the method x.save() would produce A.save() (and not C.save()). This scheme works fine for simple cases, but has problems that become apparent when one considers more complicated uses of multiple inheritance. One problem concerns method lookup under "diamond inheritance." For example:
+class A:
+  def save(self): pass
+
+class B(A): pass
+
+class C(A):
+  def save(self): pass
+
+class D(B, C): pass
+Here, class D inherits from B and C, both of which inherit from class A. Using the classic MRO, methods would be found by searching the classes in the order D, B, A, C, A. Thus, a reference to x.save() will call A.save() as before. However, this is unlikely what you want in this case! Since both B and C inherit from A, one can argue that the redefined method C.save() is actually the method that you want to call, since it can be viewed as being "more specialized" than the method in A (in fact, it probably calls A.save() anyways). For instance, if the save() method is being used to save the state of an object, not calling C.save() would break the program since the state of C would be ignored.
+http://python-history.blogspot.in/2010/06/method-resolution-order.html
+http://stackoverflow.com/questions/1848474/method-resolution-order-mro-in-new-style-python-classes
+
+
+
+Wrapper Functions:
+So you want to get going in a hurry? To illustrate the use of SWIG, suppose you have some C functions you want added to Tcl, Perl, Python, Java and C#. Specifically, let's say you have them in a file 'example.c'
+
+ /* File : example.c */
+ 
+ #include <time.h>
+ double My_variable = 3.0;
+ 
+ int fact(int n) {
+     if (n <= 1) return 1;
+     else return n*fact(n-1);
+ }
+ 
+ int my_mod(int x, int y) {
+     return (x%y);
+ }
+ 	
+ char *get_time()
+ {
+     time_t ltime;
+     time(&ltime);
+     return ctime(&ltime);
+ }
+Interface file
+Now, in order to add these files to your favorite language, you need to write an "interface file" which is the input to SWIG. An interface file for these C functions might look like this :
+/* example.i */
+ %module example
+ %{
+ /* Put header files here or function declarations like below */
+ extern double My_variable;
+ extern int fact(int n);
+ extern int my_mod(int x, int y);
+ extern char *get_time();
+ %}
+ 
+ extern double My_variable;
+ extern int fact(int n);
+ extern int my_mod(int x, int y);
+ extern char *get_time();
+Building a Python module
+Turning C code into a Python module is also easy. Simply do the following (shown for Irix, see the SWIG Wiki Shared Libraries page for help with other operating systems):
+
+ unix % swig -python example.i
+ unix % gcc -c example.c example_wrap.c \
+        -I/usr/local/include/python2.1
+ unix % ld -shared example.o example_wrap.o -o _example.so 
+
+
+We can now use the Python module as follows :
+>>> import example
+ >>> example.fact(5)
+ 120
+ >>> example.my_mod(7,3)
+ 1
+ >>> example.get_time()
+ 'Sun Feb 11 23:01:07 1996'
+ >>>
+
+
+
+
+
+Decision Minds: Whts z d diff between multithreading and multiprocessing?
+Print 1 to 1lac is it better to use thread?
+
+OS Module:
+Current working directory - os.getcwd() 
+Change the current working directory - os.chdir()
+Extending and Embedding Python There are two basic methods for integrating C/C++ with Python 
+• Extension writing. Python access to C/C++. 
+• Embedding C/C++ access to the Python interpreter.
+Is there a way to know by which Python version the .pyc file was compiled?
+You can get the magic number of your Python as follows:
+
+$ python -V
+Python 2.6.2
+# python
+>>> import imp
+>>> imp.get_magic().encode('hex')
+'d1f20d0a'
+To get the magic number for a pyc file you can do the following:
+
+>>> f = open('test25.pyc')
+>>> magic = f.read(4)
+>>> magic.encode('hex')
+'b3f20d0a'
+>>> f = open('test26.pyc')
+>>> magic = f.read(4)
+>>> magic.encode('hex')
+'d1f20d0a'
+By comparing the magic numbers you'll know the python version that generated the pyc file.
+
+
+Aricent CSR Qualcomm:
+Q: how to import all modules in a folder without explicitly naming them?
+Q:use lambda function to write if else statement?
+Q: 
+
+
+Differences between Jython and Python ? 
+CPython(simply python) is the C implementation of the Python language
+Jython is an implementation of the Python language for the Java platform
+
+Python:
+C
+Multi-platform
+Compiles to .pyc
+Extend with C
+GIL 1*
+Python Garbage Collection
+Jython:
+100% Java
+Any JVM (currently 1.1+)
+Compiles to .class
+Extend with Java
+Truly multi-threaded
+Java garbage collection
+Jython converts Python code into Java byte code.
+Is Jython the same language as Python?
+Yes. 
+
+Msys:
+
+
+
+
+Expression to filter email id from string:
+>>> s = 'Hello from csev@umich.edu to cwen@iupui.edu about the meeting @2PM'
+>>> lst = re.findall('\S+@\S+', s)
+>>> print lst
+['csev@umich.edu', 'cwen@iupui.edu']
+
+
+
+Convert a string to pre existing variable names:
+print eval('self.post.id')                              #Prints the value of self.post.id
+Convert a string to new variable name:
+x='buffalo'    
+exec("%s = %d" % (x,2))
+
+Twisted Framework:
+http://twistedmatrix.com/documents/12.0.0/web/howto/web-in-60/index.html
+http://twistedmatrix.com/documents/current/core/howto/index.html
+http://jcalderone.livejournal.com/tag/sixty%20seconds
+http://twistedmatrix.com/documents/13.0.0/api/twisted.protocols.amp.html
+http://twistedmatrix.com/documents/13.0.0/core/howto/amp.html
+
+Show variables in scope:
+Couple of things you could use:
+dir() will give you the list of in scope variables:
+globals() will give you a dictionary of global variables
+locals() will give you a dictionary of local variables
+
+Writing list to file:
+Itemlist = [1,2,3]
+outfile = open(‘filename.txt’,’a’)
+outfile.write("\n".join(itemlist))
+
+
+ It is a lot more than just a scripting tool like, for example, perl.
+
+Code analysis tools ncc, cscope
+
+Shortcut to reverse a string or list in python:
+>>> a = "mohrafiq"
+>>> a[::-1]
+'qifarhom'
+>>> l = [1, 4 ,'s',{3},"qwerty"] 
+>>> l[::-1]
+['qwerty', set([3]), 's', 4, 1]
+
+
+Scientific stack:
+Pandas - data crunching
+Scikit    - machine learning
+Matplotlib- data visualization
+Numpy - numeric computation
+
+Data science is the intersection of programming, statistics and topical expertise
+Cython is a superset of python language
+its like a bridge between python, C/C++
+
+How to check version of python modules?
+In most linux systems, you can pipe this to grep(or findstr on Windows) to find the row for the particular package you're interested in:
+
+Linux:
+$ pip freeze | grep lxml
+lxml==2.3
+
+Windows:
+c:\> pip freeze | findstr lxml
+lxml==2.3
+For an individual module, you can try the __version__ attribute, however there are modules without it:
+
+$ python -c "import requests; print(requests.__version__)"
+2.14.2
+>>> import statlib
+>>> print statlib.__version__
+
+
+
+============================Jan2020======================
+Python considers empty strings as having boolean value of ‘false’ and non-empty string as having boolean value of ‘true’.
+For ‘and’ operator if left value is true, then right value is checked and returned. If left value is false, then it is returned
+For ‘or’ operator if left value is true, then it is returned, otherwise if left value is false, then right value is returned.
+Note that the bitwise operators (| , &) don’t work for strings.
+
+>>> print 'a' and 'b' and 'c'
+c
+>>> print 'a' or 'b' or 'c'
+a
+What is pickling and unpickling?
+
+Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using a dump function, this process is called pickling. While the process of retrieving original Python objects from the stored string representation is called unpickling.
+
+1. What is PEP 8?
+PEP 8 is a coding convention, a set of recommendations, about how to write your Python code more readable.
+2. What is pickling and unpickling?
+Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using a dump function, this process is called pickling.  While the process of retrieving original Python objects from the stored string representation is called unpickling.
+# Save a dictionary into a pickle file.
+import pickle
+favorite_color = { "lion": "yellow", "kitty": "red" }
+pickle.dump( favorite_color, open( "save.p", "wb" ) )
+# Load the dictionary back from the pickle
+favorite_color = pickle.load( open( "save.p", "rb" ) )
+# favorite_color is now { "lion": "yellow", "kitty": "red" }
+
+3. How memory is managed in Python?
+
+Python memory is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap and the interpreter takes care of this Python private heap.
+The allocation of Python heap space for Python objects is done by Python memory manager. The core API gives access to some tools for the programmer to code.
+Python also has an inbuilt garbage collector, which recycles all the unused memory and frees the memory and makes it available to the heap space.
+
+What are the tools that help to find bugs or perform static analysis?
+PyChecker is a static analysis tool that detects the bugs in Python source code and warns about the style and complexity of the bug. Pylint is another tool that verifies whether the module meets the coding standard.
+check memory address of variable
+>>> l = [1,2]
+>>> print id(l)
+8869512
+
+garbage collection
+	The process of freeing memory when it is not used anymore. Python performs garbage collection via reference counting and a cyclic garbage collector that is able to detect and break reference cycles.
+Reference count:
+The number of references to an object. When the reference count of an object drops to zero, it is deallocated. Reference counting is generally not visible to Python code, but it is a key element of the CPython implementation. The sys module defines a getrefcount() function that programmers can call to return the reference count for a particular object.
+
+4. Process vs thread:
+The threading module uses threads, the multiprocessing uses processes. The difference is that threads run in the same memory space, while processes have separate memory. This makes it a bit harder to share objects between processes with multiprocessing. Since threads use the same memory, precautions have to be taken or two threads will write to the same memory at the same time. This is what the global interpreter lock is for.
+Spawning processes are a bit slower than spawning threads. Once they are running, there is not much difference.
+However, Python* has an added issue: There's a Global Interpreter Lock that prevents two threads in the same process from running Python code at the same time. This means that if you have 8 cores, and change your code to use 8 threads, it won't be able to use 800% CPU and run 8x faster; it'll use the same 100% CPU and run at the same speed. (In reality, it'll run a little slower, because there's extra overhead from threading, even if you don't have any shared data, but ignore that for now.)
+
+There are exceptions to this. If your code's heavy computation doesn't actually happen in Python, but in some library with custom C code that does proper GIL handling, like a numpy app, you will get the expected performance benefit from threading. The same is true if the heavy computation is done by some subprocess that you run and wait on.
+
+More importantly, there are cases where this doesn't matter. For example, a network server spends most of its time reading packets off the network, and a GUI app spends most of its time waiting for user events. One reason to use threads in a network server or GUI app is to allow you to do long-running "background tasks" without stopping the main thread from continuing to service network packets or GUI events. And that works just fine with Python threads. (In technical terms, this means Python threads give you concurrency, even though they don't give you core-parallelism.)
+
+But if you're writing a CPU-bound program in pure Python, using more threads is generally not helpful.
+
+Using separate processes has no such problems with the GIL, because each process has its own separate GIL. Of course you still have all the same tradeoffs between threads and processes as in any other languages—it's more difficult and more expensive to share data between processes than between threads, it can be costly to run a huge number of processes or to create and destroy them frequently, etc. But the GIL weighs heavily on the balance toward processes, in a way that isn't true for, say, C or Java. So, you will find yourself using multiprocessing a lot more often in Python than you would in C or Java.
+
+Meanwhile, Python's "batteries included" philosophy brings some good news: It's very easy to write code that can be switched back and forth between threads and processes with a one-liner change.
+
+If you design your code in terms of self-contained "jobs" that don't share anything with other jobs (or the main program) except input and output, you can use the concurrent.futures library to write your code around a thread pool like this
+5. What is GIL?
+Global interpreter lock (GIL) is a mechanism used in computer language interpreters to synchronize the execution of threads so that only one native thread can execute at a time. An interpreter that uses GIL always allows exactly one thread to execute at a time, even if run on a multi-core processor. Some popular interpreters that have GIL are CPython and Ruby MRI.
+
+A global interpreter lock (GIL) is a mutual-exclusion lock held by a programming language interpreter thread to avoid sharing code that is not thread-safe with other threads. In implementations with a GIL, there is always one GIL for each interpreter process. CPython and Ruby MRI use GILs.
+
+Applications running on implementations with a GIL can be designed to use separate processes to achieve full parallelism, as each process has its own interpreter and in turn has its own GIL. Otherwise, the GIL can be a significant barrier to parallelism.
+
+Benefits and drawbacks
+Use of a global interpreter lock in a language effectively limits the amount of parallelism reachable through concurrency of a single interpreter process with multiple threads. If the process is almost purely made up of interpreted code and does not make calls outside of the interpreter for long periods of time (which can release the lock on the GIL on that thread while it processes), there is likely to be very little increase in speed when running the process on a multiprocessor machine. Due to signaling with a CPU-bound thread, it can cause a significant slowdown, even on single processors
+
+Reasons for employing such a lock include:
+
+increased speed of single-threaded programs (no necessity to acquire or release locks on all data structures separately),
+easy integration of C libraries that usually are not thread-safe,
+ease of implementation (having a single GIL is much simpler to implement than a lock-free interpreter or one using fine-grained locks).
+
+Wipro interview.
+What design patterns/frameworks are used?
+Which framework we can use to get data from restful API and put it in to frontend, in real time data, How to make webservice call to any cloud providers and play it into UI.
+How about authentication mechanism and security?
+Which templating engine Django uses?
+DjangoTemplate
+How to get printable string representation of an object?
+Python repr() is a built-in function that returns a string containing a printable representation of an object.
+>>> l=[1,2]
+>>> l[8:]
+[]
+str() and repr() both are used to get a string representation of an object.
+
+
+
+import datetime 
+today = datetime.datetime.now()  
+# Prints readable format for date-time object 
+print str(today) 
+# prints the official format of date-time object 
+print repr(today)      
+Output:
+2016-02-22 19:32:04.078030
+datetime.datetime(2016, 2, 22, 19, 32, 4, 78030)
+
+Worked on any REST Frameworks?
+How do you handle JsonResponse?
+Django supports a number of serialization formats, some of which require you to install third-party Python modules:
+Identifier
+Information
+xml
+Serializes to and from a simple XML dialect.
+json
+Serializes to and from JSON.
+yaml
+Serializes to YAML (YAML Ain’t a Markup Language). This serializer is only available if PyYAML is installed.
+
+
+class JsonResponse(data, encoder=DjangoJSONEncoder, safe=True, json_dumps_params=None, **kwargs)¶
+An HttpResponse subclass that helps to create a JSON-encoded response. It inherits most behavior from its superclass with a couple differences:
+Usage¶
+Typical usage could look like:
+>>> from django.http import JsonResponse
+>>> response = JsonResponse({'foo': 'bar'})
+>>> response.content
+b'{"foo": "bar"}'
+How to create abstract classes?
+Which module do you use to make a class abstract?
+Call abstract method from class
+Can we have multiple function definitions in lambda function?
+How to write code to be compatible with all python versions, with all the compilers?
+Custom location of python library
+Modules to connect to databases:
+PostgreSQL → psycopg2
+SQL Server → pyodbc
+MySQL → MySQLdb
+SQLite → sqlite3
+Oracle → cx_Oracle
+Bosch interview:
+How to use Session framework in Django.
+What is the middleware of djngo
+explain CDN integration?
+Django is based on which architecture
+What is DRF? Django rest framework
+What is ORM?
+How do you write unit test and integration test in Django?
+What are the guidelines you follow while writing code?
+Design patterns are a toolkit of tried and tested solutions to common problems in software design
+
+What are metaclasses:
+Metaclasses are the 'stuff' that creates classes.
+You define classes in order to create objects, right?
+But we learned that Python classes are objects.
+Well, metaclasses are what create these objects. They are the classes' classes, you can picture them this way:
+MyClass = MetaClass() my_object = MyClass()
+You've seen that type lets you do something like this:
+MyClass = type('MyClass', (), {})
+It's because the function type is in fact a metaclass. type is the metaclass Python uses to create all classes behind the scenes.
+Now you wonder why the heck is it written in lowercase, and not Type?
+Well, I guess it's a matter of consistency with str, the class that creates strings objects, and int the class that creates integer objects. type is just the class that creates class objects.
+You see that by checking the __class__ attribute.
+Everything, and I mean everything, is an object in Python. That includes ints, strings, functions and classes. All of them are objects. And all of them have been created from a class:
+>>> age = 35 
+>>> age.__class__ <type 'int'> 
+>>> name = 'bob' 
+>>> name.__class__ <type 'str'> 
+>>> def foo(): pass 
+>>> foo.__class__ <type 'function'> 
+>>> class Bar(object): pass >>> b = Bar() 
+>>> b.__class__ <class '__main__.Bar'>
+Now, what is the __class__ of any __class__ ?
+>>> age.__class__.__class__ <type 'type'> 
+>>> name.__class__.__class__ <type 'type'> 
+>>> foo.__class__.__class__ <type 'type'> 
+>>> b.__class__.__class__ <type 'type'>
+So, a metaclass is just the stuff that creates class objects.
+You can call it a 'class factory' if you wish.
+type is the built-in metaclass Python uses, but of course, you can create your own metaclass.
+The __metaclass__ attribute
+In Python 2, you can add a __metaclass__ attribute when you write a class (see next section for the Python 3 syntax):
+class Foo(object): __metaclass__ = something... [...]
+If you do so, Python will use the metaclass to create the class Foo.
+Careful, it's tricky.
+You write class Foo(object) first, but the class object Foo is not created in memory yet.
+Python will look for __metaclass__ in the class definition. If it finds it, it will use it to create the object class Foo. If it doesn't, it will use type to create the class.
+Read that several times.
+When you do:
+class Foo(Bar): pass
+Python does the following:
+Is there a __metaclass__ attribute in Foo?
+If yes, create in memory a class object (I said a class object, stay with me here), with the name Foo by using what is in __metaclass__.
+If Python can't find __metaclass__, it will look for a __metaclass__ at the MODULE level, and try to do the same (but only for classes that don't inherit anything, basically old-style classes).
+Then if it can't find any __metaclass__ at all, it will use the Bar's (the first parent) own metaclass (which might be the default type) to create the class object.
+Be careful here that the __metaclass__ attribute will not be inherited, the metaclass of the parent (Bar.__class__) will be. If Bar used a __metaclass__ attribute that created Bar with type() (and not type.__new__()), the subclasses will not inherit that behavior.
+Now the big question is, what can you put in __metaclass__ ?
+The answer is: something that can create a class.
+And what can create a class? type, or anything that subclasses or uses it.
+How to check if a dictionary is empty?
+test_dict = {} 
+if not test_dict: 
+print "Dict is Empty" 
+if not bool(test_dict): 
+print "Dict is Empty" 
+if len(test_dict) == 0: 
+print "Dict is Empty"
+>>>import sys
+>>>sys.byteorder
+‘little’
+================================================================
+1. WHAT IS PYTHON AND CAN YOU EXPLAIN IMPORTANT FEATURES OF PYTHON? 
+
+Python was developed by Guido Van Rossum in the year 1991.
+Python is a high level programming language that contains features of functional programming
+language like C and object oriented programming language like Java.
+
+FEATURES OF PYTHON
+
+□ Simple
+Python is a simple programming language because it uses English like sentences in its programs.
+□ Easy to learn
+Python uses very few keywords. Its programs use very simple structure.
+□ Open source
+Python can be freely downloaded from www.python.org website. Its source code can be read,
+modified and can be used in programs as desired by the programmers.
+□ High level language
+High level languages use English words to develop programs. These are easy to learn and use. Like
+COBOL, PHP or Java, Python also uses English words in its programs and hence it is called high
+level programming language.
+□ Dynamically typed
+In Python, we need not declare the variables. Depending on the value stored in the variable,
+Python interpreter internally assumes the datatype.
+□ Platform independent
+Hence, Python programs are not dependant on any computer with any operating system. We can
+use Python on Unix, Linux, Windows, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, etc. almost
+all operating systems. This will make Python an ideal programming language for any network or
+Internet.
+□ Portable
+When a program yields same result on any computer in the world, then it is called a portable
+program. Python programs will give same result since they are platform independent.
+□ Procedure and Object oriented
+Python is a procedure oriented as well as object oriented programming language. In procedure
+oriented programming languages (e.g. C and Pascal), the programs are built using functions and
+procedures. But in object oriented languages (e.g. C++ and Java), the programs use classes and
+objects.
+An object is anything that exists physically in the real world. An object contains behavior. This
+behavior is represented by its properties (or attributes) and actions. Properties are represented by
+variables and actions are performed by methods. So, an object contains variables and methods.
+A class represents common behavior of a group of objects. It also contains variables and methods.
+But a class does not exist physically.
+A class can be imagined as a model for creating objects. An object is an instance (physical form) of
+a class.
+□ Interpreted
+First, Python compiler translates the Python program into an intermediate code called byte code.
+This byte code is then executed by PVM. Inside the PVM, an interpreter converts the byte code
+instructions into machine code so that the processor will understand and run that machine code.
+□ Extensible
+There are other flavors of Python where programs from other languages can be integrated into
+Python. For example, Jython is useful to integrate Java code into Python programs and run on JVM
+(Java Virtual Machine). Similarly IronPython is useful to integrate .NET programs and libraries into
+Python programs and run on CLR (Common Language Runtime).
+□ Embeddable
+Several applications are already developed in Python which can be integrated into other
+programming languages like C, C++, Delphi, PHP, Java and .NET. It means programmers can use
+these applications for their advantage in various software projects.
+□ Huge library
+Python has a big library that contains modules which can be used on any Operating system.
+□ Scripting language
+A scripting language uses an interpreter to translate the source code into machine code on the fly
+(while running). Generally, scripting languages perform supporting tasks for a bigger application or
+software. Python is considered as a scripting language as it is interpreted and it is used on Internet
+to support other softwares.
+□ Database connectivity
+A database represents software that stores and manipulates data. Python provides interfaces to
+connect its programs to all major databases like Oracle, Sybase, SQL Server or MySql.
+□ Scalable
+A program would be scalable if it could be moved to another Operating system or hardware and
+take full advantage of the new environment in terms of performance.
+□ Batteries included
+The huge library of Python contains several small applications (or small packages) which are
+already developed and immediately available to programmers. These libraries are called ‘batteries
+included’. 
+
+Some interesting batteries or packages are given here:
+argparse is a package that represents command-line parsing library.
+boto is Amazon web services library.
+CherryPy is a Object-oriented HTTP framework.
+cryptography offers cryptographic techniques for the programmers
+Fiona reads and writes big data files
+jellyfish is a library for doing approximate and phonetic matching of strings.
+matplotlib is a library for electronics and electrical drawings.
+mysql-connector-python is a driver written in Python to connect to MySQL database.
+numpy is a package for processing arrays of single or multidimensional type.
+pandas is a package for powerful data structures for data analysis, time series and statistics.
+Pillow is a Python imaging library.
+pyquery represents jquery-like library for Python.
+scipy is the scientific library to do scientific and engineering calculations.
+Sphinx is the Python documentation generator.
+sympy is a package for Computer algebra system (CAS) in Python.
+w3lib is a library of web related functions.
+whoosh contains fast and pure Python full text indexing, search and spell checking library.
+To know the entire list of packages included in Python, one can visit:
+https://www.pythonanywhere.com/batteries_included/
+
+================================================================================================================================================
+2. WHAT IS A FROZEN BINARY?
+
+When a software is developed in Python, there are two ways to provide the software to the end
+user. The first way is to provide the .pyc files to the user. The user will install PVM in his computer
+and run the byte code instructions of the .pyc files.
+The other way is to provide the .pyc files, PVM along with necessary Python library. In this
+method, all the .pyc files, related Python library and PVM will be converted into a single
+executable file (generally with .exe extension) so that the user can directly execute that file by
+double clicking on it. In this way, converting the Python programs into true executables is called
+frozen binaries. But frozen binaries will have more size than that of simple .pyc files since they
+contain PVM and library files also.
+For creating Frozen binaries, we need to use other party softwares. For example, py2exe is a
+software that produces frozen binaries for Windows operating system. We can use pyinstaller for
+UNIX or LINUX. Freeze is another program from Python organization to generate frozen binaries
+for UNIX.
+=================================================================================================================================================
+
+3. WHAT IS THE ROLE OF PVM?
+A Python program contains source code (first.py) that is first compiled by Python compiler to
+produce byte code (first.pyc). This byte code is given to Python Virtual Machine (PVM) which
+converts the byte code to machine code. This machine code is run by the processor and finally the
+results are produced.
+Python Virtual Machine (PVM) is a software that contains an interpreter that converts the byte
+code into machine code.
+PVM is most often called Python interpreter. The PVM of PyPy contains a compiler in addition to
+the interpreter. This compiler is called Just In Time (JIT) compiler which is useful to speed up
+execution of the Python program.
+Memory management by PVM
+Memory allocation and deallocation are done by PVM during runtime. Entire memory is allocated
+on heap.
+We know that the actual memory (RAM) for any program is allocated by the underlying Operating
+system. On the top of the Operating system, a raw memory allocator oversees whether enough
+memory is available to it for storing the objects (ex: integers, strings, functions, lists, modules etc).
+On the top of the raw memory allocator, there are several object-specific allocators operate on
+the same heap. These memory allocators will implement different types of memory management
+policies depending on the type of the objects. For example, an integer number should be stored in
+memory in one way and a string should be stored in a different way. Similarly, when we deal with
+tuples and dictionaries, they should be stored differently. These issues are taken care by object-
+specific memory allocators.
+==============================================================================================================================================
+
+4. WHAT IS GARBAGE COLLECTOR?
+A module represents Python code that performs specific task. Garbage collector is a module in
+Python that is useful to delete objects from memory which are not used in the program. The
+module that represents the garbage collector is named as gc. Garbage collector in the simplest
+way maintains a count for each object regarding how many times that object is referenced (or
+used). When an object is referenced twice, its reference count will be 2. When an object has some
+count, it is being used in the program and hence garbage collector will not remove it from
+memory. When an object is found with a reference count 0, garbage collector will understand that
+the object is not used by the program and hence it can be deleted from memory. Hence, the
+memory allocated for that object is deallocated or freed.
+=================================================================================================================================================
+
+5. WHY PYTHON IS CALLED INTERPRETED LANGUAGE?
+First, Python compiler translates the Python program into an intermediate code called byte code.
+This byte code is then executed by PVM. Inside the PVM, an interpreter converts the byte code
+instructions into machine code so that the processor will understand and run that machine code.
+===================================================================================================================================================
+6. WHY VARIABLES ARE NOT DECLARED IN PYTHON?
+Python uses dynamic typing so no neeed to declare a variable.(PHP - dynami typing)
+===================================================================================================================================================
+7. HOW CAN YOU KNOW THE DATATYPE OF A VARIABLE?
+we can use type() function to know the datatype of variable
+===================================================================================================================================================
+8. WHAT IS THE DIFFERENCE BETWEEN C AND PYTHON?
+C LANGUAGE:
+structure oriented
+used for hardware operable applications
+runs under a compiler
+has only few built-in functions
+needs deeper understandingg to program and implement
+
+Python Language:
+Object oriented
+used for general purpose programming language
+runs under interpreter
+has fully formed builtin and pre defined library functions
+
+===================================================================================================================================================
+9. WHAT IS THE DIFFERENCE BETWEEN JAVA AND PYTHON?
+java takes 10 lines of code to read from a file while python needs 2 lines but compared to java, python is less portable
+===================================================================================================================================================
+10. WHAT IS A SEQUENCE?
+A group of elements
+string
+list
+tuple
+set
+range
+===================================================================================================================================================
+11. WHAT ARE VARIOUS DATATYPES IN PYTHON?
+1)None
+
+2)Numeric - immutable
+int 
+float
+complex
+bool
+
+3)sequence
+string - immutable
+list - mutable
+tuple - immutable
+set - mutable
+range 
+
+4)mapping
+dict
+===================================================================================================================================================
+12. WHAT IS THE DIFFERENCE BETWEEN LIST AND TUPLE?
+list is a 
+mutable
+better for performing operations like insertion, deletion
+consumes more memory
+it has several builtin methods
+
+tuple:
+immutable
+it is appropriate for accessing the elements
+consumes less memory
+does not have sevaral builtin methods
+
+===================================================================================================================================================
+13. WHAT IS THE DIFFERENCE BETWEEN BYTES AND BYTEARRAY?
+Both hold arrays of bytes, where each byte can take on a value between 0 to 255
+bytes:
+immutable
+
+bytearray:
+mutable
+
+===================================================================================================================================================
+14. WHAT IS THE DIFFERENCE BETWEEN SET AND FROZENSET?
+frozenset is immutable and set is mutable
+===================================================================================================================================================
+15. WHAT IS INDEXING
+Indexing
+retreiving an ele from an iterable by using its position no.
+Slicing
+retreiving an subset of ele from an iterable based on their indices
+===================================================================================================================================================
+16. WHAT IS THE DIFFERENCE BETWEEN LIST AND ARRAY?
+list :
+consists of elements of different datatypes
+no need to explicitly import module
+allows easy modification of data like addition and deletion
+consumes larger memory for easy addition of elements
+
+array:
+consists elements of same datatypes
+need to import array module
+less flexibility since addition, deletion to be done on element wise
+more compact in memory size
+
+
+===================================================================================================================================================
+17. EXPLAIN ABOUT SLICING? HOW CAN YOU DO REVERSE SLICING?
+Slicing
+retreiving an subset of ele from an iterable based on their indices
+we can do reversee slicing using negative indices
+===================================================================================================================================================
+18. EXPLAIN ABOUT ASSERT STATEMENT?
+assert keyword tests if a condition is true, if it is false it will stop the program with optional message
+mainly used to debug code and handle errors and we should not use in production environment
+===================================================================================================================================================
+19. WHAT IS A FUNCTION? WHAT IS ITS USE?
+it is a block of code to perform specific task and it will be executed only when it is called by its named
+if we need to perform same task multiple times then functions are useful
+===================================================================================================================================================
+20. WHAT IS THE DIFFERENCE BETWEEN LOCAL AND GLOBAL VARIABLE?
+Local variable can be accessed within the function or block  only but global variable can be accessed entire program
+===================================================================================================================================================
+21. WHAT ARE MUTABLE OBJECTS AND IMMUTABLE OBJECTS?
+LIST
+set
+dictionary
+
+immutable
+tuple
+string
+
+
+
+===================================================================================================================================================
+22. WHY STRINGS ARE CREATED AS IMMUTABLE OBJECTS?
+
+===================================================================================================================================================
+23. WHAT ARE KEYWORD ARGUMENTS? HOW THEY ARE USED?
+
+===================================================================================================================================================
+24. WHAT IS THE USE OF A STAR (*) BEFORE AN ARGUMENT IN THE FUNCTION?
+===================================================================================================================================================
+25. WHAT IS A DECORATOR? CAN YOU GIVE EXAMPLES FOR ALREADY AVAILABLE DECORATORS IN PYTHON?
+===================================================================================================================================================
+26. WHAT IS A LAMBDA? WHAT IS ITS ADVANTAGE?
+===================================================================================================================================================
+27. WHAT IS THE DIFFERENCE BETWEEN NORMAL FUNCTION AND LAMBDA?
+===================================================================================================================================================
+28. WHAT IS THE DIFFERENCE BETWEEN PACKAGE AND MODULE?
+===================================================================================================================================================
+29. EXPLAIN THE WAYS OF IMPORTING A MODULE IN PYTHON?
+===================================================================================================================================================
+30. WHAT IS THE USE OF ARANGE() 
+arange function gives array with equaly spaced elements as per the interval 
+===================================================================================================================================================
+31. HOW CAN YOU KNOW THE NUMBER OF ELEMENTS IN AN ARRAY?
+===================================================================================================================================================
+32. WHAT IS THE DIFFERENCE BETWEEN RESHAPE() AND FLATTEN() ?
+===================================================================================================================================================
+33. IN NUMPY, ALL ARRAYS ARE INTERNALLY OBJECTS OF WHICH CLASS?
+===================================================================================================================================================
+34. WHICH METHODS ARE USED TO FIND MATRIX TRANSPOSE? (HINT: TRANSPOSE(), T)
+===================================================================================================================================================
+35. WHAT IS LIST COMPREHENSION? WHAT IS ITS ADVANTAGE?
+===================================================================================================================================================
+36. WHAT IS THE DIFFERENCE BETWEEN SCRIPT AND PROGRAM? WILL PYTHON COME UNDER SCRIPT OR PROGRAM?
+===================================================================================================================================================
+ADV PYTHON
+37. HOW CAN YOU CREATE A CLASS AND OBJECT TO IT, EXPLAIN.
+===================================================================================================================================================
+38. WHAT IS THE USE OF SELF VARIABLE?
+===================================================================================================================================================
+39. WHAT IS THE DIFFERENCE BETWEEN DEFAULT CONSTRUCTOR AND PARAMETERIZED CONSTRUCTOR?
+===================================================================================================================================================
+40. WHEN A CONSTRUCTOR IS CALLED?
+===================================================================================================================================================
+41. WHAT IS THE DIFFERENCE BETWEEN INSTANCE VARIABLE AND CLASS VARIABLE?
+===================================================================================================================================================
+42. WHAT IS THE DIFFERENCE BETWEEN CLASS METHODS AND STATIC METHODS?
+===================================================================================================================================================
+43. WHAT IS NAME MANGLING?
+===================================================================================================================================================
+44. WHAT ARE DUNDERS / DOUBLE UNDERSCORES / MAGIC METHODS IN PYTHON?
+===================================================================================================================================================
+45. CAN YOU INHERIT A CLASS FROM ANOTHER CLASS? HOW?
+===================================================================================================================================================
+46. WHAT IS DUCK TYPING?
+===================================================================================================================================================
+47. WHAT IS THE PROCEDURE OF CREATING ABSTRACT CLASS?
+===================================================================================================================================================
+48. WHAT IS THE DIFFERENCE BETWEEN ABSTRACT CLASS AND INTERFACE?
+===================================================================================================================================================
+49. HOW CAN YOU OVERRIDE A METHOD?
+===================================================================================================================================================
+50. ALL EXCEPTIONS ARE SUB CLASSES OF WHICH CLASS?
+===================================================================================================================================================
+51. WHAT IS THE DIFFERENCE BETWEEN EXCEPTION AND ERROR?
+===================================================================================================================================================
+52. HOW CAN YOU HANDLE MULTIPLE EXCEPTIONS?
+===================================================================================================================================================
+53. WHAT IS THE DIFFERENCE BETWEEN TEXT FILE AND BINARY FILE?
+===================================================================================================================================================
+54. WHAT IS CONTEXT MANAGER? CAN YOU GIVE EXAMPLES? (HINT: WITH BLOCK, LOCK, ZIPFILE)
+===================================================================================================================================================
+55. WHAT IS PICKLE? WHICH METHOD IS USED IN PICKLE?
+===================================================================================================================================================
+56. WHAT IS UNPICKLE? WHICH METHOD IS USED IN UNPICKLE?
+===================================================================================================================================================
+57. WHICH METHODS ARE USED IN RANDOM ACCESSING OF FILES? (HINT: TELL(), SEEK())
+===================================================================================================================================================
+58. WHAT IS A MMAP FILE? WHEN IT IS REQUIRED?
+===================================================================================================================================================
+59. WHAT IS REGULAR EXPRESSION?
+===================================================================================================================================================
+60. WHAT IS THE DIFFERENCE BETWEEN SEARCH() AND FINDALL() ?
+===================================================================================================================================================
+61. WHAT IS THE USE OF ^, $, *, +, ?, \D AND \W IN REGULAR EXPRESSIONS?
+===================================================================================================================================================
+62. HOW CAN YOU DISPLAY SYSTEM DATE AND TIME?
+===================================================================================================================================================
+63. WHAT ARE THE DIFFERENT TYPES OF MULTI TASKING?
+===================================================================================================================================================
+64. WHAT IS THREAD SYNCHRONIZATION? HOW CAN YOU DO IT?
+===================================================================================================================================================
+65. EXPLAIN THE FAMOUS PRODUCER-CONSUMER PROBLEM IN THREADS.
+===================================================================================================================================================
+66. WHAT IS THE DIFFERENCE BETWEEN LOCK AND SEMAPHORE?
+===================================================================================================================================================
+67. WHAT IS THREAD DEADLOCK? HOW CAN YOU AVOID IT?
+===================================================================================================================================================
+68. WHAT IS THE DIFFERENCE BETWEEN NOTIFY() AND NOTIFY_ALL() ?
+===================================================================================================================================================
+69. WHAT IS A WIDGET?
+===================================================================================================================================================
+70. WHAT IS THE DIFFERENCE BETWEEN ROOT WINDOW AND FRAME?
+===================================================================================================================================================
+71. WHAT IS THE USE OF MAINLOOP() METHOD?
+===================================================================================================================================================
+72. WHAT IS SOCKET / SOCKET PROGRAMMING?
+===================================================================================================================================================
+73. HOW CAN YOU CREATE A SOCKET?
+===================================================================================================================================================
+74. WHAT IS PORT / PORT NUMBER?
+===================================================================================================================================================
+75. WHAT IS URL?
+===================================================================================================================================================
+76. WHAT IS CONNECTION OBJECT?
+===================================================================================================================================================
+77. WHAT IS CURSOR?
+===================================================================================================================================================
+78. WHAT IS THE DIFFERENCE BETWEEN FETCHONE() AND FETCHALL() ?
+===================================================================================================================================================
+79. WHAT IS DATABASE CONNECTOR / DRIVER?
+===================================================================================================================================================
+80. WHAT IS JSON? WHAT IS ITS IMPORTANCE?
+===================================================================================================================================================
+81. WHAT IS THE DIFFERENCE BETWEEN SERIES AND DATAFRAME?
+===================================================================================================================================================
+82. WHAT IS THE DIFFERENCE BETWEEN ILOC() AND LOC() ?
+===================================================================================================================================================
+83. HOW CAN YOU CREATE DATAFRAME FROM A .CSV FILE AND EXCEL FILES?
+===================================================================================================================================================
+84. WHEN THE DATAFRAME IN THE MEMORY IS MODIFIED, WILL IT MODIFY THE DATA IN THE ORIGINAL FILE FROM
+WHERE THE DATAFRAME IS CREATED?
+===================================================================================================================================================
+85. HOW CAN VIEW FIRST 5 ROWS AND LAST 5 ROWS IN A DATAFRAME?
+===================================================================================================================================================
+86. HOW CAN YOU SORT THE ROWS OF A DATAFRAME INTO ASCENDING ORDER?
+===================================================================================================================================================
+87. HOW CAN YOU REMOVE NAN VALUES FOUND IN THE DATA?
+===================================================================================================================================================
+88. WHAT THE ATTRIBUTE 'INPLACE=TRUE' DOES IN A DATAFRAME?
+===================================================================================================================================================
+89. WHY DO WE USE MATPLOTLIB?
+===================================================================================================================================================
+90. WITH WHAT PACKAGES YOU WORKED IN PYTHON? (HINT: NUMPY, RE, TKINTER, THREADING, SOCKET, PANDAS,
+MATPLOTLIB, ETC.)
+===========================================================================================
+WHAT IS FLASK
+Flask is a Web Server Gateway Interface WSGI web applicationframework. 
+This means flask provides you with tools, libraries and technologies that allow you to build a web application. 
+This web application can be some web pages, a blog, a wiki or go as big as a web-based calendar application or a commercial website. 
+Flask is part of the categories of the micro-framework.
+
+Flask is an micro framework offering basic features of web app. This framework has no dependencies on external libraries. 
+The framework offers extensions for form validation, object-relational mappers, open authentication systems, uploading mechanism, and several other tools.
+
+FEATURES OF FLASK
+Here, are important features of Flask
+Integrated support for unit testing.
+RESTful request dispatching.
+Uses a Ninja2 template engine.
+It is based on Werkzeug toolkit.
+Support for secure cookies (client-side sessions).
+Extensive documentation.
+Google app engine compatibility.
+APIs are nicely shaped and coherent
+Easily deployable in production
+
+WHAT IS DJANGO
+Django is a web development framework for Python. This framework offers a standard method for fast and effective website development. 
+It helps you in building and maintaining quality web applications. 
+It enables you to make the development process smooth and time-saving.
+It is a high-level web framework which allows performing rapid development. 
+The primary goal of this web framework is to create complex database-driven websites.
+
+FEATURES OF DJANGO
+Here are important features of Django:
+Offers Model - View – Controller (MVC) Architecture.
+Predefined libraries for imaging, graphics, scientific calculations, etc.
+Supports for multiple databases.
+Cross-platform operating system.
+Site optimization across specialized servers
+Support for front-end tools like Ajax, jQuery, Pyjamas, etc.
+Supports multi-Language and multi-characters.
+
+WHICH IS BETTER?
+You should prefers flask if you want the granular level of control while a Django developer relies on an extensive community to create unique website.
+Django combined with the REST Framework helps you to build powerful APIs, whereas Flask requires more work, so there are high chances to make a mistake.
+The best method is to build a few basic CRUD apps with both frameworks and decide which framework fits your project style better.
+
+WHAT IS GIT
+It is software for tracking changes in any set of files, 
+usually used for coordinating work among programmers collaboratively developing source code during software development. 
+Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems). 
+
+Git is the most commonly used version control system. 
+Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. 
+Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source. 
+So regardless of whether you write code that only you will see, or work as part of a team, Git will be useful for you.
+
+WHAT IS BIT BUCKET
+Bitbucket is Git repository management which is specially developed for professional teams. 
+The central hub to handle all the repositories of git is collaborated on the source code and guide all through the software development cycle. 
+It is a section of the Atlassian family with tools such as Confluence, Jira, and others to support the technical teams to explore the entire potential. 
+
+WHAT IS DOCKER
+Docker is a tool designed to create, deploy, and run containers and container-based applications. It can run on Linux, Windows, and macOS. 
+Dockers allow developers to package applications into containers that combine application source code with all the dependencies 
+and libraries needed to run the code in any environment. Docker makes it easier and simpler to run containers using simple commands and work-saving automation
+
+A docker image is a type of template with instructions to create docker containers. They are created using the build command. 
+Docker image can be created using a read-only template by using the run command. Docker allows you to create and share software using docker images. 
+We can either create a new image as per the requirements or use a ready-made cocker image from the docker hub.
+
+Containers are a runnable instance of images or the ready applications created from docker images. 
+Through Docker API or CLI, we can create or delete a container. 
+Containers can be connected to one or more networks, even create a new image, or attach storage to its current state. 
+Containers are by default isolated from each other and their host machine.
+
+Finally, the docker registry is the place where Docker images are stored. 
+The docker Hub is a public registry that anyone can access and configure Docker to look at images on docker hub by default. 
+
+WHAT IS JIRA
+Jira Software is part of a family of products designed to help teams of all types manage work. 
+Originally, Jira was designed as a bug and issue tracker. But today, 
+Jira has evolved into a powerful work management tool for all kinds of use cases, from requirements and test case management to agile software development.
+
+WHAT IS BAMBOO
+Bamboo is a continuous integration server from Atlassian. It connects issues, commits, test results, and deploys 
+so the whole picture is available to the entire product team. 
+It takes the build further with automated building, testing, deploying, and releasing of the software.
+
+WHAT IS ECLIPSE
+WHAT IS PYCHARM
+WHAT IS HTML
+WHAT IS CSS
+WHAT IS MYSQL
+WHAT IS POSTGRESSQL
+WHAT IS MONGODB
+WHAT ARE LINUX COMMANDS
+WHAT IS UNITTEST
+WHAT IS MOCK
+WHAT IS AGILE
+Agile is a collection of principles used in software development and project management. 
+Agile focuses on enabling teams to deliver work in small, workable increments, thus delivering value to their customers with ease. 
+Evaluation of the requirements, plans, and results take place continuously.
+4 values
+Individuals and interactions over processes and tools
+Working software over comprehensive documentation
+Customer collaboration over contract negotiation
+Responding to change over following a plan
+12 principles
+“Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.”
+
+WHAT IS SCRUM
+Scrum is a framework within which people can address complex adaptive problems, 
+while productively and creatively delivering products of the highest possible value. 
+
+
+
+FLASK VS DJANGO
+KEY DIFFERENCES:
+Flask provides support for API while Django doesn't have any support for API.  
+
+Flask does not support dynamic HTML pages and Django offers dynamic HTML pages.
+Flask is a Python web framework built for rapid development whereas Django is built for easy and simple projects.
+Flask offers a diversified working style while Django offers a Monolithic working style.
+URL dispatcher of the Flask web framework is a RESTful request on the other hand, URL dispatcher of Django framework is based on controller-regex.
+Flask is WSGI framework while Django is a Full Stack Web Framework.
+
+json  to dict  in python  
+dict  to json  in python
+pickling unpickling in python
+serlization deserialization in python 
+json dumps() loads()
+MVC vs MVT
+MVC benifits
+
+Importance of Context Manager in python
+How with statement internally works in python

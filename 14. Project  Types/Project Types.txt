@@ -1,0 +1,97 @@
+
+Projects :
+----------
+1. Development         
+2. Enhancement / Release  
+3. Support     / Production Support / 
+   Maintenance / AMS(Annual Maintenace Support)  
+
+
+Interview process:
+---------------------
+Domain    : Healthcare/fincial/banking/telecom/ecommmrce
+Techstack : Python Flask/Django/own framework/Pyramid/Bottle 
+		    Manual Testing/Automation(Selenium) 
+			Tools : Bitbucket, Jira, Bamboo, GIT, 
+					Docker,kuberntes
+					AWS 
+Type of project: DEV/ENH/SUP
+					
+
+dev word:
+----------
+		I. Code versioning : main - development - feature branch (github)
+	   II. Instances       : local  DEV TEST UAT PROD 
+	  III. Project types   : Development
+
+API :
+-------
+Request URL   :
+Request Method:
+Payload       : 	
+
+
+I. Development:
+-------------------
+   a. Assignments
+  b*. Scratch project, start the implementation -- Skeleton structure
+   c. Live project - new functionalities / modules 
+   
+		b.  Development Scratch project :
+		-----------------------------------
+		XYZ Software Services  <== http://mpay.com 
+		Req Gathering : 100 stories 
+		project setup
+		login functionality	
+		display modules in home page
+
+		c. Development but existing project :
+		--------------------------------------
+		We can copy existing code and same process can be implemented
+
+		Scratch 10 APIs - Existing Project(UI developer will provide APIs)
+		Train Booking in paytm
+		Flight booking in flipkart
+		Bus booking
+		Movies
+
+
+2. Enhancement/Release:
+---------------------------
+Feature exists,Need to perform enhancements 
+
+
+
+3. Production Support: 
+----------------------
+Local --> DEV --> TEST --> UAT --> PRODUCTION*
+
+
+1. Issue replication   
+2. RCA Root Cause Analysis (Debugging) 
+3. Fixing the production issues
+
+ - Fix  => Local -> DEV  -> TEST  -> UAT -> PROD
+
+		   (Instances)
+
+
+Login: username,password homepage 10 seconds 
+production issue
+
+
+HDFCBank
+homepage - 10 seconds 
+Jira ticket -> convert to enhancement --> 2 to 3 seconds  
+
+TCS:
+	abc team 
+	
+Requirement: order place email,mobile
+
+
+
+
+
+
+ 

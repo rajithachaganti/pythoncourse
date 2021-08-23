@@ -1,0 +1,422 @@
+1. WHAT IS PYTHON AND CAN YOU EXPLAIN IMPORTANT FEATURES OF PYTHON? 
+
+Python was developed by Guido Van Rossum in the year 1991.
+Python is a high level programming language that contains features of functional programming
+language like C and object oriented programming language like Java.
+
+FEATURES OF PYTHON
+
+□ Simple
+Python is a simple programming language because it uses English like sentences in its programs.
+□ Easy to learn
+Python uses very few keywords. Its programs use very simple structure.
+□ Open source
+Python can be freely downloaded from www.python.org website. Its source code can be read,
+modified and can be used in programs as desired by the programmers.
+□ High level language
+High level languages use English words to develop programs. These are easy to learn and use. Like
+COBOL, PHP or Java, Python also uses English words in its programs and hence it is called high
+level programming language.
+□ Dynamically typed
+In Python, we need not declare the variables. Depending on the value stored in the variable,
+Python interpreter internally assumes the datatype.
+□ Platform independent
+Hence, Python programs are not dependant on any computer with any operating system. We can
+use Python on Unix, Linux, Windows, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, etc. almost
+all operating systems. This will make Python an ideal programming language for any network or
+Internet.
+□ Portable
+When a program yields same result on any computer in the world, then it is called a portable
+program. Python programs will give same result since they are platform independent.
+□ Procedure and Object oriented
+Python is a procedure oriented as well as object oriented programming language. In procedure
+oriented programming languages (e.g. C and Pascal), the programs are built using functions and
+procedures. But in object oriented languages (e.g. C++ and Java), the programs use classes and
+objects.
+An object is anything that exists physically in the real world. An object contains behavior. This
+behavior is represented by its properties (or attributes) and actions. Properties are represented by
+variables and actions are performed by methods. So, an object contains variables and methods.
+A class represents common behavior of a group of objects. It also contains variables and methods.
+But a class does not exist physically.
+A class can be imagined as a model for creating objects. An object is an instance (physical form) of
+a class.
+□ Interpreted
+First, Python compiler translates the Python program into an intermediate code called byte code.
+This byte code is then executed by PVM. Inside the PVM, an interpreter converts the byte code
+instructions into machine code so that the processor will understand and run that machine code.
+□ Extensible
+There are other flavors of Python where programs from other languages can be integrated into
+Python. For example, Jython is useful to integrate Java code into Python programs and run on JVM
+(Java Virtual Machine). Similarly IronPython is useful to integrate .NET programs and libraries into
+Python programs and run on CLR (Common Language Runtime).
+□ Embeddable
+Several applications are already developed in Python which can be integrated into other
+programming languages like C, C++, Delphi, PHP, Java and .NET. It means programmers can use
+these applications for their advantage in various software projects.
+□ Huge library
+Python has a big library that contains modules which can be used on any Operating system.
+□ Scripting language
+A scripting language uses an interpreter to translate the source code into machine code on the fly
+(while running). Generally, scripting languages perform supporting tasks for a bigger application or
+software. Python is considered as a scripting language as it is interpreted and it is used on Internet
+to support other softwares.
+□ Database connectivity
+A database represents software that stores and manipulates data. Python provides interfaces to
+connect its programs to all major databases like Oracle, Sybase, SQL Server or MySql.
+□ Scalable
+A program would be scalable if it could be moved to another Operating system or hardware and
+take full advantage of the new environment in terms of performance.
+□ Batteries included
+The huge library of Python contains several small applications (or small packages) which are
+already developed and immediately available to programmers. These libraries are called ‘batteries
+included’. 
+
+Some interesting batteries or packages are given here:
+argparse is a package that represents command-line parsing library.
+boto is Amazon web services library.
+CherryPy is a Object-oriented HTTP framework.
+cryptography offers cryptographic techniques for the programmers
+Fiona reads and writes big data files
+jellyfish is a library for doing approximate and phonetic matching of strings.
+matplotlib is a library for electronics and electrical drawings.
+mysql-connector-python is a driver written in Python to connect to MySQL database.
+numpy is a package for processing arrays of single or multidimensional type.
+pandas is a package for powerful data structures for data analysis, time series and statistics.
+Pillow is a Python imaging library.
+pyquery represents jquery-like library for Python.
+scipy is the scientific library to do scientific and engineering calculations.
+Sphinx is the Python documentation generator.
+sympy is a package for Computer algebra system (CAS) in Python.
+w3lib is a library of web related functions.
+whoosh contains fast and pure Python full text indexing, search and spell checking library.
+To know the entire list of packages included in Python, one can visit:
+https://www.pythonanywhere.com/batteries_included/
+
+================================================================================================================================================
+2. WHAT IS A FROZEN BINARY?
+
+When a software is developed in Python, there are two ways to provide the software to the end
+user. The first way is to provide the .pyc files to the user. The user will install PVM in his computer
+and run the byte code instructions of the .pyc files.
+The other way is to provide the .pyc files, PVM along with necessary Python library. In this
+method, all the .pyc files, related Python library and PVM will be converted into a single
+executable file (generally with .exe extension) so that the user can directly execute that file by
+double clicking on it. In this way, converting the Python programs into true executables is called
+frozen binaries. But frozen binaries will have more size than that of simple .pyc files since they
+contain PVM and library files also.
+For creating Frozen binaries, we need to use other party softwares. For example, py2exe is a
+software that produces frozen binaries for Windows operating system. We can use pyinstaller for
+UNIX or LINUX. Freeze is another program from Python organization to generate frozen binaries
+for UNIX.
+=================================================================================================================================================
+
+3. WHAT IS THE ROLE OF PVM?
+A Python program contains source code (first.py) that is first compiled by Python compiler to
+produce byte code (first.pyc). This byte code is given to Python Virtual Machine (PVM) which
+converts the byte code to machine code. This machine code is run by the processor and finally the
+results are produced.
+Python Virtual Machine (PVM) is a software that contains an interpreter that converts the byte
+code into machine code.
+PVM is most often called Python interpreter. The PVM of PyPy contains a compiler in addition to
+the interpreter. This compiler is called Just In Time (JIT) compiler which is useful to speed up
+execution of the Python program.
+Memory management by PVM
+Memory allocation and deallocation are done by PVM during runtime. Entire memory is allocated
+on heap.
+We know that the actual memory (RAM) for any program is allocated by the underlying Operating
+system. On the top of the Operating system, a raw memory allocator oversees whether enough
+memory is available to it for storing the objects (ex: integers, strings, functions, lists, modules etc).
+On the top of the raw memory allocator, there are several object-specific allocators operate on
+the same heap. These memory allocators will implement different types of memory management
+policies depending on the type of the objects. For example, an integer number should be stored in
+memory in one way and a string should be stored in a different way. Similarly, when we deal with
+tuples and dictionaries, they should be stored differently. These issues are taken care by object-
+specific memory allocators.
+==============================================================================================================================================
+
+4. WHAT IS GARBAGE COLLECTOR?
+A module represents Python code that performs specific task. Garbage collector is a module in
+Python that is useful to delete objects from memory which are not used in the program. The
+module that represents the garbage collector is named as gc. Garbage collector in the simplest
+way maintains a count for each object regarding how many times that object is referenced (or
+used). When an object is referenced twice, its reference count will be 2. When an object has some
+count, it is being used in the program and hence garbage collector will not remove it from
+memory. When an object is found with a reference count 0, garbage collector will understand that
+the object is not used by the program and hence it can be deleted from memory. Hence, the
+memory allocated for that object is deallocated or freed.
+=================================================================================================================================================
+
+5. WHY PYTHON IS CALLED INTERPRETED LANGUAGE?
+First, Python compiler translates the Python program into an intermediate code called byte code.
+This byte code is then executed by PVM. Inside the PVM, an interpreter converts the byte code
+instructions into machine code so that the processor will understand and run that machine code.
+===================================================================================================================================================
+6. WHY VARIABLES ARE NOT DECLARED IN PYTHON?
+Python uses dynamic typing so no neeed to declare a variable.(PHP - dynami typing)
+===================================================================================================================================================
+7. HOW CAN YOU KNOW THE DATATYPE OF A VARIABLE?
+we can use type() function to know the datatype of variable
+===================================================================================================================================================
+8. WHAT IS THE DIFFERENCE BETWEEN C AND PYTHON?
+C LANGUAGE:
+structure oriented
+used for hardware operable applications
+runs under a compiler
+has only few built-in functions
+needs deeper understandingg to program and implement
+
+Python Language:
+Object oriented
+used for general purpose programming language
+runs under interpreter
+has fully formed builtin and pre defined library functions
+
+===================================================================================================================================================
+9. WHAT IS THE DIFFERENCE BETWEEN JAVA AND PYTHON?
+java takes 10 lines of code to read from a file while python needs 2 lines but compared to java, python is less portable
+===================================================================================================================================================
+10. WHAT IS A SEQUENCE?
+A group of elements
+string
+list
+tuple
+set
+range
+===================================================================================================================================================
+11. WHAT ARE VARIOUS DATATYPES IN PYTHON?
+1)None
+
+2)Numeric - immutable
+int 
+float
+complex
+bool
+
+3)sequence
+string - immutable
+list - mutable
+tuple - immutable
+set - mutable
+range 
+
+4)mapping
+dict
+===================================================================================================================================================
+12. WHAT IS THE DIFFERENCE BETWEEN LIST AND TUPLE?
+list is a 
+mutable
+better for performing operations like insertion, deletion
+consumes more memory
+it has several builtin methods
+
+tuple:
+immutable
+it is appropriate for accessing the elements
+consumes less memory
+does not have sevaral builtin methods
+
+===================================================================================================================================================
+13. WHAT IS THE DIFFERENCE BETWEEN BYTES AND BYTEARRAY?
+Both hold arrays of bytes, where each byte can take on a value between 0 to 255
+bytes:
+immutable
+
+bytearray:
+mutable
+
+===================================================================================================================================================
+14. WHAT IS THE DIFFERENCE BETWEEN SET AND FROZENSET?
+frozenset is immutable and set is mutable
+===================================================================================================================================================
+15. WHAT IS INDEXING
+Indexing
+retreiving an ele from an iterable by using its position no.
+Slicing
+retreiving an subset of ele from an iterable based on their indices
+===================================================================================================================================================
+16. WHAT IS THE DIFFERENCE BETWEEN LIST AND ARRAY?
+list :
+consists of elements of different datatypes
+no need to explicitly import module
+allows easy modification of data like addition and deletion
+consumes larger memory for easy addition of elements
+
+array:
+consists elements of same datatypes
+need to import array module
+less flexibility since addition, deletion to be done on element wise
+more compact in memory size
+
+
+===================================================================================================================================================
+17. EXPLAIN ABOUT SLICING? HOW CAN YOU DO REVERSE SLICING?
+Slicing
+retreiving an subset of ele from an iterable based on their indices
+we can do reversee slicing using negative indices
+===================================================================================================================================================
+18. EXPLAIN ABOUT ASSERT STATEMENT?
+assert keyword tests if a condition is true, if it is false it will stop the program with optional message
+mainly used to debug code and handle errors and we should not use in production environment
+===================================================================================================================================================
+19. WHAT IS A FUNCTION? WHAT IS ITS USE?
+it is a block of code to perform specific task and it will be executed only when it is called by its named
+if we need to perform same task multiple times then functions are useful
+===================================================================================================================================================
+20. WHAT IS THE DIFFERENCE BETWEEN LOCAL AND GLOBAL VARIABLE?
+Local variable can be accessed within the function or block  only but global variable can be accessed entire program
+===================================================================================================================================================
+21. WHAT ARE MUTABLE OBJECTS AND IMMUTABLE OBJECTS?
+LIST
+set
+dictionary
+
+immutable
+tuple
+string
+
+
+
+===================================================================================================================================================
+22. WHY STRINGS ARE CREATED AS IMMUTABLE OBJECTS?
+
+===================================================================================================================================================
+23. WHAT ARE KEYWORD ARGUMENTS? HOW THEY ARE USED?
+
+===================================================================================================================================================
+24. WHAT IS THE USE OF A STAR (*) BEFORE AN ARGUMENT IN THE FUNCTION?
+===================================================================================================================================================
+25. WHAT IS A DECORATOR? CAN YOU GIVE EXAMPLES FOR ALREADY AVAILABLE DECORATORS IN PYTHON?
+===================================================================================================================================================
+26. WHAT IS A LAMBDA? WHAT IS ITS ADVANTAGE?
+===================================================================================================================================================
+27. WHAT IS THE DIFFERENCE BETWEEN NORMAL FUNCTION AND LAMBDA?
+===================================================================================================================================================
+28. WHAT IS THE DIFFERENCE BETWEEN PACKAGE AND MODULE?
+===================================================================================================================================================
+29. EXPLAIN THE WAYS OF IMPORTING A MODULE IN PYTHON?
+===================================================================================================================================================
+30. WHAT IS THE USE OF ARANGE() 
+arange function gives array with equaly spaced elements as per the interval 
+===================================================================================================================================================
+31. HOW CAN YOU KNOW THE NUMBER OF ELEMENTS IN AN ARRAY?
+===================================================================================================================================================
+32. WHAT IS THE DIFFERENCE BETWEEN RESHAPE() AND FLATTEN() ?
+===================================================================================================================================================
+33. IN NUMPY, ALL ARRAYS ARE INTERNALLY OBJECTS OF WHICH CLASS?
+===================================================================================================================================================
+34. WHICH METHODS ARE USED TO FIND MATRIX TRANSPOSE? (HINT: TRANSPOSE(), T)
+===================================================================================================================================================
+35. WHAT IS LIST COMPREHENSION? WHAT IS ITS ADVANTAGE?
+===================================================================================================================================================
+36. WHAT IS THE DIFFERENCE BETWEEN SCRIPT AND PROGRAM? WILL PYTHON COME UNDER SCRIPT OR PROGRAM?
+===================================================================================================================================================
+ADV PYTHON
+37. HOW CAN YOU CREATE A CLASS AND OBJECT TO IT, EXPLAIN.
+===================================================================================================================================================
+38. WHAT IS THE USE OF SELF VARIABLE?
+===================================================================================================================================================
+39. WHAT IS THE DIFFERENCE BETWEEN DEFAULT CONSTRUCTOR AND PARAMETERIZED CONSTRUCTOR?
+===================================================================================================================================================
+40. WHEN A CONSTRUCTOR IS CALLED?
+===================================================================================================================================================
+41. WHAT IS THE DIFFERENCE BETWEEN INSTANCE VARIABLE AND CLASS VARIABLE?
+===================================================================================================================================================
+42. WHAT IS THE DIFFERENCE BETWEEN CLASS METHODS AND STATIC METHODS?
+===================================================================================================================================================
+43. WHAT IS NAME MANGLING?
+===================================================================================================================================================
+44. WHAT ARE DUNDERS / DOUBLE UNDERSCORES / MAGIC METHODS IN PYTHON?
+===================================================================================================================================================
+45. CAN YOU INHERIT A CLASS FROM ANOTHER CLASS? HOW?
+===================================================================================================================================================
+46. WHAT IS DUCK TYPING?
+===================================================================================================================================================
+47. WHAT IS THE PROCEDURE OF CREATING ABSTRACT CLASS?
+===================================================================================================================================================
+48. WHAT IS THE DIFFERENCE BETWEEN ABSTRACT CLASS AND INTERFACE?
+===================================================================================================================================================
+49. HOW CAN YOU OVERRIDE A METHOD?
+===================================================================================================================================================
+50. ALL EXCEPTIONS ARE SUB CLASSES OF WHICH CLASS?
+===================================================================================================================================================
+51. WHAT IS THE DIFFERENCE BETWEEN EXCEPTION AND ERROR?
+===================================================================================================================================================
+52. HOW CAN YOU HANDLE MULTIPLE EXCEPTIONS?
+===================================================================================================================================================
+53. WHAT IS THE DIFFERENCE BETWEEN TEXT FILE AND BINARY FILE?
+===================================================================================================================================================
+54. WHAT IS CONTEXT MANAGER? CAN YOU GIVE EXAMPLES? (HINT: WITH BLOCK, LOCK, ZIPFILE)
+===================================================================================================================================================
+55. WHAT IS PICKLE? WHICH METHOD IS USED IN PICKLE?
+===================================================================================================================================================
+56. WHAT IS UNPICKLE? WHICH METHOD IS USED IN UNPICKLE?
+===================================================================================================================================================
+57. WHICH METHODS ARE USED IN RANDOM ACCESSING OF FILES? (HINT: TELL(), SEEK())
+===================================================================================================================================================
+58. WHAT IS A MMAP FILE? WHEN IT IS REQUIRED?
+===================================================================================================================================================
+59. WHAT IS REGULAR EXPRESSION?
+===================================================================================================================================================
+60. WHAT IS THE DIFFERENCE BETWEEN SEARCH() AND FINDALL() ?
+===================================================================================================================================================
+61. WHAT IS THE USE OF ^, $, *, +, ?, \D AND \W IN REGULAR EXPRESSIONS?
+===================================================================================================================================================
+62. HOW CAN YOU DISPLAY SYSTEM DATE AND TIME?
+===================================================================================================================================================
+63. WHAT ARE THE DIFFERENT TYPES OF MULTI TASKING?
+===================================================================================================================================================
+64. WHAT IS THREAD SYNCHRONIZATION? HOW CAN YOU DO IT?
+===================================================================================================================================================
+65. EXPLAIN THE FAMOUS PRODUCER-CONSUMER PROBLEM IN THREADS.
+===================================================================================================================================================
+66. WHAT IS THE DIFFERENCE BETWEEN LOCK AND SEMAPHORE?
+===================================================================================================================================================
+67. WHAT IS THREAD DEADLOCK? HOW CAN YOU AVOID IT?
+===================================================================================================================================================
+68. WHAT IS THE DIFFERENCE BETWEEN NOTIFY() AND NOTIFY_ALL() ?
+===================================================================================================================================================
+69. WHAT IS A WIDGET?
+===================================================================================================================================================
+70. WHAT IS THE DIFFERENCE BETWEEN ROOT WINDOW AND FRAME?
+===================================================================================================================================================
+71. WHAT IS THE USE OF MAINLOOP() METHOD?
+===================================================================================================================================================
+72. WHAT IS SOCKET / SOCKET PROGRAMMING?
+===================================================================================================================================================
+73. HOW CAN YOU CREATE A SOCKET?
+===================================================================================================================================================
+74. WHAT IS PORT / PORT NUMBER?
+===================================================================================================================================================
+75. WHAT IS URL?
+===================================================================================================================================================
+76. WHAT IS CONNECTION OBJECT?
+===================================================================================================================================================
+77. WHAT IS CURSOR?
+===================================================================================================================================================
+78. WHAT IS THE DIFFERENCE BETWEEN FETCHONE() AND FETCHALL() ?
+===================================================================================================================================================
+79. WHAT IS DATABASE CONNECTOR / DRIVER?
+===================================================================================================================================================
+80. WHAT IS JSON? WHAT IS ITS IMPORTANCE?
+===================================================================================================================================================
+81. WHAT IS THE DIFFERENCE BETWEEN SERIES AND DATAFRAME?
+===================================================================================================================================================
+82. WHAT IS THE DIFFERENCE BETWEEN ILOC() AND LOC() ?
+===================================================================================================================================================
+83. HOW CAN YOU CREATE DATAFRAME FROM A .CSV FILE AND EXCEL FILES?
+===================================================================================================================================================
+84. WHEN THE DATAFRAME IN THE MEMORY IS MODIFIED, WILL IT MODIFY THE DATA IN THE ORIGINAL FILE FROM
+WHERE THE DATAFRAME IS CREATED?
+===================================================================================================================================================
+85. HOW CAN VIEW FIRST 5 ROWS AND LAST 5 ROWS IN A DATAFRAME?
+===================================================================================================================================================
+86. HOW CAN YOU SORT THE ROWS OF A DATAFRAME INTO ASCENDING ORDER?
+===================================================================================================================================================
+87. HOW CAN YOU REMOVE NAN VALUES FOUND IN THE DATA?
+===================================================================================================================================================
+88. WHAT THE ATTRIBUTE 'INPLACE=TRUE' DOES IN A DATAFRAME?
+===================================================================================================================================================
+89. WHY DO WE USE MATPLOTLIB?
+===================================================================================================================================================
+90. WITH WHAT PACKAGES YOU WORKED IN PYTHON? (HINT: NUMPY, RE, TKINTER, THREADING, SOCKET, PANDAS,
+MATPLOTLIB, ETC.)

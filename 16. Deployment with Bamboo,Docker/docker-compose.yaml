@@ -1,0 +1,73 @@
+version: '2.1'
+services:
+    zookeeper:
+        image: confluent/zookeeper:3.4.6-cp1
+        container_name: zookeeper
+        restart: on-failure
+        environment:
+            zk_id: "1"
+    kafka:
+        image: confluent/kafka:0.10.0.0-cp1
+        container_name: kafka
+        restart: on-failure
+        depends_on:
+            - zookeeper
+        environment:
+            KAFKA_BROKER_ID: 1
+            KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+        volumes:
+          - ${kafka_backup}:/kafka
+    cassandra:
+        image: cassandra:3.11
+        container_name: cassandra
+        healthcheck:
+          test: ["CMD-SHELL", "[ $$(nodetool statusgossip) = running ]"]
+          interval: 30s
+          timeout: 10s
+          retries: 5
+        volumes:
+          - ${cassandra_backup}:/var/lib/cassandra
+	postgresql:
+        image: containers.paytm.com/flask-services/postgres:0.0.5
+        container_name: postgres
+        healthcheck:
+          test: ["CMD-SHELL", "pg_isready -U postgres"]
+          interval: 30s
+          timeout: 10s
+          retries: 5
+        volumes:
+          - ${postgres_backup}:/var/lib/postgresql/data   
+	my_service_1:
+        #image: containers.paytm.com/proj-services/my_service_1:5.1.1
+		image: my_service_1: 5.1.4
+        container_name: my_service_1
+        command: python app.py
+        restart: always
+        depends_on:
+            postgres:
+                condition: service_healthy
+            kafka:
+                condition: service_started
+            ddataset:
+                condition: service_started
+        environment:
+            FLASK_SERVICE_HOST: 'myapp_paytm'
+            KAFKA_HOST: 'kafka'
+            POSTGRES_HOST: 'postgres'
+    my_service_2:
+        #image: containers.paytm.com/proj-services/my_service_2:6.2.3
+		image: my_service_1: 6.2.4
+        container_name: my_service_1
+        command: python app.py
+        restart: always
+        depends_on:
+            postgres:
+                condition: service_healthy
+            kafka:
+                condition: service_started
+            ddataset:
+                condition: service_started
+        environment:
+            FLASK_SERVICE_HOST: 'myapp_paytm'
+            KAFKA_HOST: 'kafka'
+            POSTGRES_HOST: 'postgres'

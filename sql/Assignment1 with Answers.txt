@@ -1,0 +1,132 @@
+1) display ename,job,sal,deptno,dname whose location is "CHICAGO"
+
+SYNTAX::-
+-------
+SELECT 
+COLUMN NAMES
+FROM
+TAB1 T1,
+TAB2 T2
+WHERE
+T1.COMMONCOLUMN = T2.COMMONCOLUMN
+
+SELECT
+E.ename,E.job,E.sal,E.deptno,D.dname,d.loc 
+FROM
+EMP E,
+DEPT D
+WHERE
+E.DEPTNO = D.DEPTNO
+AND D.LOC = 'CHICAGO'
+
+
+2) display number of employees whose department is "ACCOUNTING"
+SELECT
+COUNT(EMPNO) number_of_employees
+FROM
+EMP
+WHERE
+DEPTNO IN(SELECT DEPTNO FROM DEPT WHERE DNAME = 'ACCOUNTING')
+
+SELECT
+COUNT(EMPNO) number_of_employees
+FROM
+EMP
+WHERE
+EXISTS (SELECT DEPTNO FROM DEPT WHERE DEPT.DEPTNO = EMP.DEPTNO AND DEPT.DNAME = 'ACCOUNTING')
+
+SELECT
+COUNT(E.EMPNO) number_of_employees 
+FROM
+EMP E,
+DEPT D
+WHERE
+E.DEPTNO = D.DEPTNO
+AND D.DNAME = 'ACCOUNTING'
+
+3) display ename,job,sal,dname whose dname 5th character should be "S"
+
+SELECT
+E.ename,E.job,E.sal,E.deptno,D.dname,d.loc 
+FROM
+EMP E,
+DEPT D
+WHERE
+E.DEPTNO = D.DEPTNO
+AND D.DNAME LIKE '____S%'
+
+4) display dname,loc whose dname doesnot contain employees
+SELECT
+D.DNAME,D.LOC
+FROM
+DEPT D
+WHERE NOT EXISTS (SELECT 1 FROM EMP WHERE EMP.DEPTNO = D.DEPTNO )
+
+SELECT
+E.ename,E.job,E.sal,E.deptno,D.dname,d.loc 
+FROM
+EMP E
+LEFT JOIN DEPT D
+ON E.DEPTNO = D.DEPTNO
+WHERE E.mgr IS NULL
+
+SELECT
+D.DNAME,D.LOC
+FROM
+DEPT D
+WHERE DEPTNO NOT IN (SELECT DEPTNO FROM EMP)
+
+
+5) display ename,job,sal,dname,loc whose sal greater than or equal to 3000
+SELECT
+E.ename,E.job,E.sal,E.deptno,D.dname,d.loc 
+FROM
+EMP E
+LEFT JOIN DEPT D
+ON E.DEPTNO = D.DEPTNO
+WHERE E.SAL >=3000
+
+6) display ename,job,sal whose sal is more than avgerage sal of employees(Using Subquery)
+SELECT ENAME,JOB,SAL
+FROM
+EMP WHERE SAL > (SELECT AVG(SAL) FROM EMP)
+
+7) display employee details AND dept details and apply deptno in Ascending order 
+ and Job in descending order.And sal is greater than or equal to 2500
+ 
+ SELECT
+E.ename,E.job,E.sal,E.deptno,D.dname,d.loc 
+FROM
+EMP E
+INNER JOIN DEPT D
+ON E.DEPTNO = D.DEPTNO
+WHERE E.SAL >=2500
+ORDER BY E.DEPTNO ASC,E.JOB DESC
+ 
+8) display number of employees and job details.
+(How many employees available in a specific job)
+SELECT
+JOB,COUNT(*) NUMBER_OF_EMPLOYEES
+FROM
+EMP
+GROUP BY JOB
+
+9) display number of employees available in location "DALLAS"(Using EXISTS or IN)
+SELECT
+COUNT(EMPNO) number_of_employees
+FROM
+EMP
+WHERE
+DEPTNO IN(SELECT DEPTNO FROM DEPT WHERE LOC = 'DALLAS')
+
+SELECT
+COUNT(EMPNO) number_of_employees
+FROM
+EMP
+WHERE
+EXISTS (SELECT DEPTNO FROM DEPT WHERE DEPT.DEPTNO = EMP.DEPTNO AND DEPT.LOC = 'DALLAS')
+
+
+10) display employee details whose salary between 2500 and 3000
+SELECT * FROM EMP
+WHERE SAL BETWEEN 2500 and 3000

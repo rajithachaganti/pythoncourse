@@ -1,0 +1,119 @@
+REST API Calls: 
+===================
+
+user --> paytm -      - Hotel
+						API CALL exposes
+		P Flask         P Djagno
+		Windows         Linux
+		
+				hdfcbank
+					API CALL exposes
+					Java Spring
+					iOS
+					
+paytm --->  hdfcbank
+				API CALL
+				RequestURL    : http://hdfcbank.com/api/fundtranser
+				RequestMethod : POST
+				Payload       : {'accid':,'name':,;expdate':}
+
+1. Browser
+2. Postman
+3. Through webservices(REST)
+	requests.get(url)
+	requests.post(url,data=payload)
+
+
+
+
+
+WEB SERVICES:
+---------------			
+					
+user to paym    ->    client(user) server(paytm)
+paytm to hdfc   ->    client(paytm) server(hdfc)
+
+
+Already service impl output is in url http://reqres.in 
+
+Perform below actions:
+----------------------
+1. Call these api calls from Postman tool and observe the response.
+2. Call from Python (using requests module and observe data in console)
+3. Integrate with python and pass it as data to controller layer(assume as customer input)
+   and perfrom CRUD operations(Refer DB MVC code)
+   
+   
+add functionality:
+------------------
+API Call:
+-----------
+Request URL: http://127.0.0.1:5000/add
+Request Method: POST
+Payload : {"argument1":10,
+		   "argument2":20
+		   }
+		   
+		   
+New requirement:
+----------------
+# Implement addition of square values 
+
+
+UI         Backend developer
+
+API Call :
+-------------
+Desc: Api call for addition of square values of 2 numbers
+
+API : 
+-------
+Request URL     : http://127.0.0.1:5000/add_squares
+Request Method  : POST
+Payload         : {"argument1":10,
+				   "argument2":20
+		          }
+
+Response: Success case : {"data": "500"}  statuscode : 200
+		  failure case : exception message 
+Response: Success case : {data: 500}  statuscode : 200
+		  failure case : exception message 				  
+Response: Success case : [500]  statuscode : 200
+		  failure case : exception message 				  
+			
+Response: Success case : {'data': str(result),'status':'success'}  statuscode : 200
+		  failure case : exception message 				  
+			
+
+
+								
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

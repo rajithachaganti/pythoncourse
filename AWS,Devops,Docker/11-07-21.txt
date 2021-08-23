@@ -1,0 +1,8 @@
+Date	   Timings		Topics
+11-Jul-21  8AM to 10AM	   AWS Basics - Regions & Availability Zones
+			   VPC, Subnet, Route tables, IGW, Nat Gateways, Security Groups
+			   EC2, Launch types, UserData scripts, AMIs
+			   Scalability & High Availability, Load Balancing & Auto Scaling
+                           Storage types, EBS volumes, EFS & S3
+                           Databases Overview & Types
+                           Overview of Networking & Infrastructure Architecture.

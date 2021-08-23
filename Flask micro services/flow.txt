@@ -1,0 +1,62 @@
+
+
+
+python App.py 
+-------------
+UI:
+-----
+app.add_route('/gui_services/{param}', microservices)
+app.add_route('/gui_services/api/{param}', logicservices)
+app.add_route('/gui_services/cuser', authData)
+app.add_route('/gui_services/cauth', authData)
+app.add_route('/gui_services/ctoken', authData)
+
+RPA:
+------
+app.add_route('/orch/api/{param}',orchestration_services)   
+
+
+App.py
+---------
+orchestration_services=Orchestrationservices()
+
+
+3 thingsL:
+--------------
+1. Request URL    --- App.py 
+2. Request method --- Orchestrationservices.py  on_get on_post
+3. payload
+
+
+For Orchestrationservices, GET method:
+----------------------------------------
+Request URL : '/orch/api/{param}'
+Requet method : GET
+Payload : "/orch/api/metrics"   (OR)
+	      "/orch/api/heartbeat"
+		  
+		  on_get() --->     /orch/api/metrics
+							/orch/api/heartbeat
+							
+							from prometheus_client import generate_latest ??
+					        json.dumps({"status": "Alive"})    ?? where it is taking json.loads()
+							
+							
+	      on_post() -->     data i.e, json_data
+		                    /orch/api/processalarms
+							/orch/api/heartbeat
+							/orch/api/processmml
+							/orch/api/processmmloutput
+							/orch/api/movetomanual
+								processalarms   processmml  processmmloutput   
+								
+								self.mmlhandler.process_alarms vs  alarms   55th line  ????
+								
+						orch_worker_pool.submit(self.mmlhandler.process_alarms, alarms)		
+								self._work_queue.put(w)
+
+
+Where I can check log files?
+Who is receiving data at other end from Orchestration   orch_worker_pool.submit(self.mmlhandler.process_alarms, alarms)
+			                                            self._work_queue.put(w)
+		  

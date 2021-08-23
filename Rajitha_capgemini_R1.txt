@@ -1,0 +1,159 @@
+Venugopal-kvenugop012@gmail.com
+======================
+Q) Difference between list and tuple?
+List is mutable,uses 2 memory blocks, slow compared to tuple 
+and tuple is immutable, 1 memory block, faster and used for reading purpose
+
+Q)what is set
+set is immutable and does not store duplicate elements and follows hashing algorithm
+
+Q)dict allows duplicate keys or not
+keys should be unic and values can be duplicate
+
+Q)if elements are even make them double else add 0
+l = [1,1,1,1,2,2,3,4,2,2,3,2,2,2,4,4]
+
+
+print("List comprehension : ",[x*x if x%2 ==0 else 0 for x in l ])
+
+Q)write a code for finding no. of times an element repeated in list
+
+l = [1,1,1,1,2,2,3,4,2,2,3,2,2,2,4,4]
+def get_num_count(in_list):
+    di = {}
+    for val in in_list:
+        if val not in di.keys():
+            di[val] = 1
+        else:
+            di[val] += 1
+    for val,count in di.items():
+        print(val,"----",count)
+
+get_num_count(l)
+Q) find max occurance value of concurrent element
+l = [1,1,1,1,2,2,3,4,2,2,3,2,2,2,4,4]
+
+
+def get_max_con_val(in_list):
+    val = l[0]
+    temp = []
+    di = {}
+    for ind in range(len(in_list)):
+        if in_list[ind] == val:
+            temp.append(in_list[ind])
+        else:
+            if in_list[ind] not in di.keys():
+                di[in_list[ind-1]] = len(temp)
+                temp = []
+            else:
+                get_dval = di[in_list[ind]]
+                print("GET",get_dval,temp)
+                if get_dval <= len(temp):
+                    di[in_list[ind]] = temp
+                    temp = []
+    print(di)
+get_max_con_val(l)
+Q) what is Abstraction
+Binding methods and its members in an single entity is called Abstraction
+Q)what are the types of inheritance
+single
+multiple
+multi level
+hybrid
+hyrarichal
+# multiple inh..
+
+class A:
+    def __init__(self):
+        print("A class")
+    def m1(self):
+        print("A m1() ")
+
+class B:
+    def __init__(self):
+        print("B class")
+    def m1(self):
+        print("B m1() ")
+
+class C(A,B):
+    def __init__(self):
+        pass
+c = C()
+c.m1()
+
+
+
+Q) write a query to select max salary
+empid
+name
+deptId
+salary
+Q)write a query using inner join to select dept id and max salary
+
+deptId
+deptName
+select d1. deptid, d1.dname, max(sal)  from employee e1 inner join dept d1 on e1.deptid = d1.deptid
+group by deptid
+
+Q)difference between search and match in regular expressions
+search - checks for a match anywhere in the string 
+match - checks for a match only beginning of the string
+
+Q)what is * and $ in regular expressions
+* - 0 or many
+$ - at the end
+
+didnt use much actually
+only in framewoks used for mapping
+
+Q)used pandas?
+no
+numpy pandas didnt work
+
+Q)what is abstraction
+hiding  implementation details and expositng only method signature
+
+
+so that we will provide abstriot for methods body
+
+
+
+Q)how did you handled large amount of data
+
+mostly it has 100 to 200 lines of data in file
+
+
+used context manager using wiht managementer
+
+with opne(filname) as file_obj:
+
+
+
+Q) how to connect to database
+using psycopg2 moduel conncetd to postgreql
+
+and mysql used mysql connector for db connection
+
+Q) how you used django
+mvt architecu
+used views lyaer to imp;lmente business lgogic
+
+adnd atabase in settings.py file to cifigure db details
+
+used model classes
+
+Q) Django features
+django has builtin orm mapping
+
+mvt architecure
+
+loosely cpupled nature aong model view and template layers
+
+
+single app and multip
+
+Q) signals used?
+singals not usre
+may be after deleting acitliy we can do post_Delete signal
+
+

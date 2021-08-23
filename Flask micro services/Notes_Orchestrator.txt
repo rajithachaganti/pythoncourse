@@ -1,0 +1,67 @@
+
+
+
+
+
+App.py
+-----------
+orchestration_services=Orchestrationservices()
+app.add_route('/gui_services/{param}', microservices)
+app.add_route('/gui_services/api/{param}', logicservices)
+app.add_route('/orch/api/{param}',orchestration_services)  * This is important
+app.add_route('/gui_services/cuser', authData)
+app.add_route('/gui_services/cauth', authData)
+app.add_route('/gui_services/ctoken', authData)
+
+
+Orchestrationservices 
+	on_get
+		/orch/api/{param}/orch/api/metrics
+		/orch/api/{param}/orch/api/heartbeat
+	on_post
+		if isRoute(route_path, "/orch/api/processalarms"):   ===> /orch/api/{param}/orch/api/processalarms
+				orch_worker_pool.submit(self.mmlhandler.process_alarms, alarms)
+								ask them purpose of mmlhandler.process_alarms
+				
+				
+								/orch/api/heartbeat
+								.....
+								.....
+								.....
+	
+	
+	mmlhandler.py          This is main logic for all if elif conditions of above on_post method. Go thorough it in details
+	----------------
+	
+	    def process_alarms(self, dfalarms=None):
+        settings.logger.info("Starting Process Alarms")
+        if dfalarms is not None and not dfalarms.empty:
+            for inx, arow in dfalarms.iterrows():
+                try:
+                    alarm = arow.to_dict()
+                    if self.insert_alarm(iactoken=alarm["iactoken"], ticketid=alarm["TicketID"], additionalinfo=alarm["additionalInfo"], bcfid=alarm["bcfID"], nodename=alarm["nodeName"], additionalfields=json.dumps(split_dict(alarm, ['robotUID', 'bcfID', 'customer', 'vendorType', 'executionmode', 'nodegroup', 'nodeName', 'nodeType', 'alarmNumber', 'alarmText', 'eventTime', 'additionalInfo', 'ParentId', 'final', 'scope', 'status'])), customer=alarm["customer"], nodevendor=alarm["vendorType"], status=alarm["status"], nodetype=alarm["nodeType"], alarmnumber=alarm["alarmNumber"], alarmname=alarm["alarmText"], eventtime=alarm["eventTime"], scope=alarm["scope"], iacalarmid=alarm["iacalarmid"], parentalarm=alarm["parentalarm"], nodeparent=alarm["ParentId"], executionmode=alarm["executionmode"], nodegroup=alarm["nodegroup"]):
+                        settings.logger.debug("Alarm inserted, iactoken: {alarm['iactoken']}")
+                        if alarm['scope'] == "In" and alarm["final"] == True:
+                            self.insert_alarmcycle(iactoken=alarm["iactoken"], tasktype="Cycle Start", inputreceived=alarm["jsonid"])
+                            self.send_alarm_to_ps(iactoken=alarm["iactoken"], tasktype="Alarm to Predictive Service")
+                            self.send_alarms_to_iAC1(AlarmHandler().generate_alarmjson2(alarm["iactoken"]))
+                except BaseException as e:
+                    jsonid = self.insert_json(jsoninput={"errordetails": traceback.format_exc()})
+                    settings.logger.error(f"Error while processing alarm {alarm['iactoken']} jsonid:{jsonid} traceback: {traceback.format_exc()}")
+            # emailhandler = EmailHandler()
+            try:
+                notify_alarm_df = dfalarms[dfalarms.alarmText.isin(settings.EMAIL_ALARM_TYPE)][['TicketID', 'alarmText',
+                                                                                                'bcfID', 'iactoken',
+                                                                                                'eventTime']]
+                notify_alarm_df.rename(index=str, columns={"TicketID": "TT Number", "alarmText": "Alarm Name", "bcfID": "Node Id",
+                                                           "iactoken": "IAC Token", "eventTime": "Event Time"}, inplace=True)
+                if len(notify_alarm_df) != 0:
+                    email_handler = EmailHandler();
+                    email_handler.sendmail(senderid=settings.EMAIL_FROM, to_recipient=settings.EMAIL_ALARM_TO,
+                                           subject=Constants.ALARM_ADD_EMAIL_SUBJECT.format(notify_alarm_df["Alarm Name"].iloc[0]),
+                                           body=Constants.ALARM_ADD_EMAIL_BODY.format(notify_alarm_df.to_html(index=False)))
+                    print("Emailed sucessfully")
+            except BaseException as e:
+                settings.logger.error(f"Error while processing alarm {alarm['iactoken']} jsonid:{jsonid} traceback: {traceback.format_exc()}")
+
+            settings.logger.info("Ending Process Alarms")

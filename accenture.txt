@@ -1,0 +1,45 @@
+roles and responsibilities
+python 9/10
+decorator
+list comprehesion vs lambda function https://www.geeksforgeeks.org/difference-between-list-comprehension-and-lambda-in-python/
+memory management in python
+GIL in python
+numpy pandas NO
+data input output  operations xlwt YES
+api development db connections ?
+sql vs mongodb
+store file in sql database
+BLOB kind in mongodb bSON
+flask vs django
+view and template in django
+important files  in django
+given django application to migrate to flask
+servers used in django
+nginx vs gunicorn
+apache servers in flask
+Docker GIT Bitbuket kafka worked
+kafka why ?
+machine learning, NLP Computer vision NO
+code reviews and code refactoring.steps you will look in peer review
+interacting with clients .What you look while interacting client
+structured application you have.
+deployment development using docker
+oops concepts used till date
+data structures 8/10
+linear data structure in python
+linked list using queue https://www.geeksforgeeks.org/queue-linked-list-implementation/
+linked list vs arrays
+creating applications while storing addresses,if we store in array.getting only 10 records at a time
+allocating 1000 data points in one go. dynamically can get 10 at a time
+trees binary tree in python
+
+
+REQ :
+-------
+platform team, building platform different components
+Angular for UI
+.net for api
+backend is Python*
+Python Numpy pandas Flask
+No django
+Mongodb

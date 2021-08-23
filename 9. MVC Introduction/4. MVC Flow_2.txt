@@ -1,0 +1,62 @@
+Framewoks:
+===========                                                  
+Flask *   : Monolithic architecture,     MVC* Design pattern(Model View Controller)
+            Microservices architecture   EBI Design pattern 
+Django *  : Monolithic                   MVT* Architecture (Model View Template)
+Pyramid   : 
+Bottle    :
+Fast API  :
+
+Spark,Scala,Python,Pyspark 
+
+MVC Design pattern : 
+---------------------
+Model-View-Controller
+
+Controller - front controller of application 
+View       - UI 
+Model      - DAO layer
+
+View    Contr.                     Model
+----------------------------------------------- 
+UI --> Controller  --> Service --> DAO --> DB
+
+Controller -> 1.  Receive data(json to dict) from Frontend(UI)
+			  2.  Perform server side validations
+			  3.  Process the data to service layer
+			 11.  Receives response from service,sends to UI
+
+Service    -> 4.  Receives data from controller layer
+              5.  Implementes business logic as per funtionality
+			  6.  Call DAO layer and pass data to perform db ops
+			  9.  Perform data processing on db results
+			  10. Send final data to controller layer
+			  
+DAO        -> 7 Receive the data and perfrom db query
+			  8 Send response to  service layer 			
+
+MVC Architecture:
+------------------ 
+		 Model      - DAO Classes <---- Database(Create Models)
+		 View       - UI   
+		 Controller - Controller
+		              Service
+		
+		UI   -> Controller  -> Service -> DAO   -> DB
+		View    Controller                Model 
+
+MVC vs MVT
+MVC benifits
+
+
+
+
+	
+
+
+
+
+
+
+		
+

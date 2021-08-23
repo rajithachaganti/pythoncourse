@@ -1,0 +1,87 @@
+2. Enhancement/Release:
+-----------------------
+changes or enhancemets in existing project
+
+Ticket1 : Mobile number registration for User   :  Enhancement/Release
+Ticket2 : Implement otp for login functionality :  Enhancement/Release
+
+Ticket3 : Cancelling Placed Order DEV   DELETE
+
+DEV,Enh/Rel :
+-------------
+Functional analysis
+Technical analysis
+Design
+Development
+Testing unittest cases
+
+urls.py : api/v1/login
+views.py : views functionality
+
+Postman : Prepeare API  
+			URL
+			Method
+			Payload
+
+Backend : Deploy the application locally
+
+- Code changes,test locally
+- push code to feature branch
+- Deploy to DEV,TEST instance and test again.
+- raise PR,add reviewers
+- once PR is approved
+- merge the feature branch code to development branch
+- parallelly create docker image(if we are using docker)
+  push the image to centralized docker hub
+- and deploy code in TEST instances.Test the entire functionality(Tester)
+- if required give demo to product owner regarding the functionality
+- Spring plan meeting (for next sprint)
+
+Sprint ends
+
+Major RELEASE (Like 2/3 months)
+
+
+
+
+Testing:
+---------
+Login functionality
+Test cases:
+-------------
+Username 
+Password 
+	Login
+
+												Expected Result   Result 
+TC1 : Give correct username,correct password    Display homepage   Pass 
+TC2 : Give correct username,wrong  password		"Pwd wrong." 	   Pass 
+TC3 : Give wrong username,correct password      "Username wrong"   Pass 
+TC4 : Give wrong username,wrong password        "Both are wrong"   Pass
+TC5 : Dont give username,password               "Plesee sign up"  Pass 
+      
+	  
+	  password : length special chars combinations first chara space 
+
+
+
+UI Backend developer Tester
+
+
+Local Postman - response 
+
+backend githb
+
+
+DEV instance   
+
+UI_v1
+py_v2
+
+
+only backend: email,mobile functionality
+otp functionality : Enter your otp:
+Fudn Transfer
+
+
+

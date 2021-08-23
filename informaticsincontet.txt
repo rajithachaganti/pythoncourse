@@ -1,0 +1,404 @@
+R1-MSTeams-Audio by Charantej for 1hr and 15m - 12-aug
+-----------------------------------------------------------
+Introduction
+current project team size?
+in python which concepts you have used
+rate yourself in python,flask,sql
+mutable and immutable structures
+list and dict definations which is better
+iterator vs generator
+range function
+list slicing
+how can we reverse a string
+how to reverse a list
+what is the output for below code
+l1=[1,2,3,4,5,6,7,8,9,0]
+for i in l1:
+    print(i)
+    l1.remove(i)
+do we have inbuilt function to reverse a list 
+what is recursive function and find factorial of a no. using it
+how to swap 2 numbers
+decorator function and write example for it
+file handling using with block and write a code to access txt file
+orm mapping
+how we will connect to database in django
+what is middleware in django and why we use them
+what are signals
+how to select a student name starting with s from given school name using orm when we have 2 tables (student aand school name table)
+
+
+
+
+
+
+5 memer team 2 UI 3 backend
+
+we dont have separte teaitng we ourselve will do testing manlly n test instance
+python with flask and janog freaowrk i worked
+and flask with rest api i have implmented
+
+
+and workd mainly for api implementation at backedn
+
+coming to python worked withdat strcuters oops conets exceptio haldning
+file hadnling etc,'
+
+
+rest api with flask framwork i have used
+Resourceis suepr class and
+
+musql postreql
+
+
+basic kowledge but dint work o it
+
+about copanyand proejct and technology stacks
+
+i am clear charan
+
+python only i worked for last 3 years
+django and flask both farmworks i worked
+
+Python 8 out of 10
+django 7 / 10
+flas 7 /10
+mysql 7/10
+mongodb just only to read data from atabse used py mongo library to intearc with db
+
+
+
+
+
+
+
+
+
+
+
+REQ:
+-----
+US Based health industry
+5 poepl in india
+4 in usa
+product based tied with CTS
+prior authorization technology
+used between insuracne company and dcotor
+
+
+Python Django mongodb
+
+
+mutable mean hwihc can be modified once create list dict set
+immutale whcih cantn string tuple numbers boolean
+
+list is sequnce which
+
+ordered
+insertion order
+can be duplicates and boht mutabl e immutable
+
+
+dict uses key value pair mechnaim
+dict keys are immuable and unique
+and uses hash table alogirht interally to store elemtns
+
+
+dicitony is beter
+
+whyb aseu uses bucket system while storing elemtns using hashcode values
+of keys
+
+
+list need to iteatate through each index to retriev elmetns
+
+automativ garba colleciont mechanim
+gc moduel which schudles for referenc count 0 then it wll be marked and then
+cleaned up operations will be done automatically
+
+
+voice is not clear
+
+its brekaing in between
+
+can i connec t fro m mobile for msteams
+
+its taking time to intslal give me a mnute
+
+
+accept my invitiaon joing fro mmobiel
+
+iterator uses for loop mechainm whihc call iter and next method calls interanlly
+
+genreator where values will be produced lazil in each iteartion and remembers
+state of execution
+
+
+speed wise  iterator is good
+memory gerantru is good
+
+range uses internally geneator in python 3.x
+in 2.7 range uses iterator mechanims
+
+range is a sequnec which will give values fro give number starting from 0
+
+to that number-1
+
+
+list slicing to get part of list we can use
+start step and index values to retriev elements
+
+
+first iterat thoruhg string for char by char
+
+and instialize empty string outside for loop
+
+appned current char to emty string in each iteration
+
+
+or else we can uses
+
+can ishare screen
+
+
+
+we use use ::-1
+
+
+
+willg ive revers of values
+
+
+
+list1.
+
+
+recurive to itearte trhouh same funciton with data processedin each iteraiton
+
+for facotiral nmber we can use recursion
+
+3.8
+
+each itariotn it removes elements right
+so remaing elements will take left shift and moves toward left
+current elment will be removed so all reamining elements will be moved to left
+next value iwll be skipped in each iteration
+
+6 times i thikn
+decorat is special funciton which has wrapper insdie it
+
+wrapper will peofrm before calling and after callin method businelss
+
+and without interacion of method at runtme decarotr will decide whtehr
+to call method or not
+
+
+nested funciton will be called before calling our mehtod
+
+
+so denomitaor is 0 so it wille balidated and returns us error
+
+
+method will not be called in htis case
+
+not sure
+
+objec releational mapping
+
+mapping database tables we can use orm amping
+in models layer wil crate model classes and then will do
+
+make migrations and migrate activities which will create db tables
+
+
+so database independnt nature can be achived with orm
+
+
+and ot inteact wiht db we can use orm queries in views layer
+
+
+
+not sure in settings.py will give conneciotn dteails
+
+
+and then if we use ptyho manage.py runserver then autoatill
+
+db conneciotn happens during deployemnt
+
+
+mdidlewr will confiure in settings.py to scan request and response
+at run time
+
+
+
+these classes will configure in settings.py
+
+
+to alter request or response at run time we can use middlewra classes
+
+process_request emthod will be called durin g request
+proces_Resposne during response
+
+
+we have pre_save post_save pre_deletel psot_delte
+
+to have noticifaciont for anhy modifications in code we can use singals
+
+didnt really work on these thigns
+
+
+
+using conetdxt manager with statement i have workd
+
+
+
+
+
+
+
+
+
+
+
+tet files motyly
+
+
+
+used with context manger which opens and closes files automatically
+
+usign enter and exit methods
+
+
+https://www.geeksforgeeks.org/python-call-parent-class-method/
+
+
+
+we have listk 10000 to 20000 records
+
+thats it
+we dont inteact much with database mostly about pytho code we used write
+
+
+its normalsql queries we used to implementation
+
+both ways orm and raw sql queries
+
+
+relations i am not so strong
+
+
+studnet school
+
+orm ont so stron
+
+g actully
+
+
+i think prefetch related we can use
+
+
+i have another call at 8.30
+
+
+
+
+
+
+i amclear from msy die
+
+
+how many rounds of discussions will be ther
+
+
+
+
+
+
+
+
+
+'''
+str1 = 'hello world'
+
+def revers_str(in_str):
+ str2 = ''
+ for char in in_str:
+ str2 = char + str2
+ print("String reversal : ", str2)
+
+revers_str(str1)
+
+list1 = [1,2,3,4,5]
+
+def rev_list(li):
+ return li[::-1]
+
+print("List reversla : ",rev_list(list1))
+
+
+# factorial
+
+def get_fact(in_no):
+ if in_no == 1:
+ return in_no
+ else:
+ return in_no * get_fact(in_no-1)
+
+print("Factorial of number :", get_fact(5))
+
+a=5
+b=10
+a,b = b,a
+print(a,b)
+
+
+def validate_data(func):
+ def nested(*args, **kwargs):
+ if args[1] == 0:
+ return "Enter den. value other than 0"
+ return func(*args,**kwargs)
+ return nested
+
+@validate_data
+def divide(num1, num2):
+ res = num1/num2
+ return res
+
+print("Division result : ", divide(10,5))
+
+
+
+def process_data(in_file):
+ with open(in_file,'r') as file_obj:
+ data = file_obj.readlines()
+ for line in data:
+ line = line.strip()
+ print(line)
+process_data('data.txt')
+
+'''
+class A:
+ def m1(self):
+ print("A m1()")
+
+class B(A):
+ def m1(self):
+ print("B m1()")
+
+class C(B):
+ def m1(self,val):
+ if val == 10:
+ super().m1()
+ pass
+ else:
+ B.m1(self)
+ print("C m1()")
+
+c = C()
+c.m1(10)
+
+# query_data = School.objects.filter(sname='xyz').
+
+# queryt_data = Student.objects.filter('sname'.startswith('s')) name__startswith
+
+

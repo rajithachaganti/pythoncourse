@@ -1,0 +1,121 @@
+3. Support, Production Support, AMS, Maintenance :
+--------------------------------------------------
+Local instance - DEV - TEST - UAT - Production
+
+Req gathering - Analysis - Design - Development - Testing - Production
+
+0+10 = 0
+0+10 = 10 production issues
+
+10+20 = 30
+10+20 = 32 production issue / enhancement billing  - 2 Days - local testing dev test uat prod   
+
+
+
+
+1 year support - 1 cr - 10cr
+
+AMS - 1 year - free 
+
+10 developers  
+Support 2 developers 
+ 
+new code - NO
+
+
+Production issues
+-------------------
+Customer requirement violations - Prod Issue
+Customer requirement changes    - Enhancement
+
+
+Customer : Production 
+
+paytm :book ticket  
+flipkart : order placed Production Issue
+
+irctc : Ticket book - buffering - 10 minutes - 
+        Sorry for the inconvenience.Unable to book ticket 
+
+Before : "Placed Order Successfully."
+After  : "Placed Order Successfully : TV,Fridge,Mobile"  
+
+Enhancement/Production Issue
+
+Enhancement : Client billing
+Production issue : 
+
+Warranty : 
+
+
+Prodution issue:
+-----------------
+Issue : urls.py views.py models.py db(table)
+				  def get_data():
+					100 lines
+					
+					
+Instances : Local - DEV - TEST - UAT - PROD   Low Medium High Critical
+
+
+DEV Project
+Enh Project
+Production Support
+             
+ 
+
+
+
+Production Issues:
+---------------------
+Ticket:
+While paying mobile bill,as an user I have given postpaid number,and selected prepaid option 
+by defualt.But it is not switching option to Postpaid.
+
+
+
+Local instance - DEV - TEST - UAT - Production
+
+
+Jira ticket:
+------------
+Req Gathering : Production Issue ticket raised
+
+Analysis : Functional analysis : Issue replication**
+								 select * from mobile_payments where service_type = 'postpaid'
+								 100 records
+								 123 7406900500 postpaid VI karnataka 123 17-Dec-20
+           Technical Analysis  : Root cause Analysis**
+								 debug the code line bye line
+								 fix - half an hour - 2 hours
+								 Regresssion Testing,Functional TESting
+								 
+		   
+		   
+http://dev.paytm.com
+http://test.paytm.com
+http://uat.paytm.com
+https://paytm.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

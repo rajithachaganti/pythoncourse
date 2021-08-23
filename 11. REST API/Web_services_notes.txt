@@ -1,0 +1,149 @@
+Flask micro services:
+-----------------------
+intergration of 2 or more services 
+
+
+service/application
+
+service:
+----------
+readme.md
+requirements.txt
+app.py 
+mvc project structure
+
+MVC Design pattern
+
+
+In micro services architecture
+service to service interactino ---> Web Services
+							   ---> Messaging streaming system
+							   
+Web Services: RESTful* webservices 
+			  SOAP webservices
+MSS     : Activemq
+          Rabbitmq
+		  Apache kafka*
+			  
+UI                Paytm 			
+Postpaid           Controller   Serivice    DAO Layer       DATABASE
+----------------------------------------------------------------------					   
+ mobileno                
+ amount
+ circle 
+ operator 
+ userid
+ password
+ 
+					
+paytm                               vodafone 
+  JAVA                                 Python
+	            --------------> 
+				rest api call 
+									class FetchBill(Resource):
+										def get():
+											....
+										def post():
+											....
+Vodafone application will expose its rest api service endpoint to public 
+			Request URL : http://vodafone.com/api/v1/fetchbill
+				Method  : POST 
+				Payload : {'moibleno':
+						   'operator':
+						   'circle':
+						   }
+	paytm                   vodafone
+    
+			
+
+				
+client -->  server 
+
+	API
+	----
+	Request URL : 
+	Request method:
+	Payload : 
+				
+							   
+					
+					
+Web Service:
+--------------
+Simcard : 
+
+Aadharcard no
+fingerprint
+
+End User:  ----->    Jio Reliance --->   UIDAI Website(Aadhar #) 
+ (UI)                Backend
+	
+	json			  Python,Flask        Java   (Mysql)
+	xml					Windows           Linux   
+	text				
+						 
+									   Web service API CALL:
+									   ----------------------
+									   URL : http://uidai.gov.in/validateaadhar
+									   Method : POST
+									   Payload : {'aadharno':'12122',
+												  'fingerpint':'dsfdf',
+												  'cut_mobno':'32432423423'
+												  }
+Web Service**
+------------
+Web Service API endpoint:
+--------------------------
+
+
+
+UIDAI:
+----------
+Client - Server
+
+HDFCBank:
+---------
+Client - Server 
+
+
+Customer validation:
+------------------------
+Webservice end point:
+
+Paytm
+---------
+busticket    
+
+
+Client   ----->   Paytm    ----- Webservice call ----->  ICICI Bank 
+					
+				
+				
+				
+				
+WebServices:
+------------
+SOAP vs REST 
+
+
+Request URL    : http://uidai.com/api/v1/emp_ops/<aad_id>
+Request Method : POST
+Payload        : {'eid': 100, 
+                  'name': 'Madhu Nettem', 
+				  'sal': 10000, 
+				  'mobile': '7406900500', 
+				  'email': 'nettemmadhu@gmail.com'
+				  }
+
+
+
+requests 
+
+
+
+
+
+
+
+
+

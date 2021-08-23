@@ -1,0 +1,99 @@
+Logging :
+---------------
+Print different messages:
+==============================
+	- Debugging 
+	- Information 
+	- Warnings 
+	- Error handling 
+	
+print vs logging
+
+disadvatages with print messages
+ 
+advantages with logging 
+
+Logging levels:
+===============
+===================================================================
+Level         When it’s used
+===================================================================
+DEBUG*    : Detailed information, 
+		    typically of interest only when diagnosing problems.
+			
+INFO**    : Confirmation that things are working as expected.
+WARNING   : An indication that something unexpected happened, or 
+            indicative of some problem in the near future 
+		    (e.g. ‘disk space low’). 
+		    The software is still working as expected.
+ERROR**   : Due to a more serious problem, the software has not been able 
+            to perform some function.
+CRITICAL  : A serious error, indicating that the program itself may be unable 
+            to continue running.
+
+
+
+https://docs.python.org/3/howto/logging.html
+
+manual setup : 
+levels scratch project logging setup
+
+logging module 
+
+Core python : print statements 
+
+message : 
+
+x = 10
+print("X is : ",x)
+x = 10+20
+print("Addition is :",x)
+
+def sum(n1,n2):
+   res = n1+n2
+   return res
+   
+output = sum(10,20)
+# service layer pass output 
+
+
+levels: Debug data  
+        Info  data
+		warn  data
+		Error data 
+		
+DEBUG - INFO - WARN - ERROR - CRITIAL
+
+DEBUG - INFO - ERROR *
+		
+		
+log.INFO
+log.info
+logging.INFO
+logging.info 
+
+logger.exception
+logger.EXEC
+logger.ERROR
+self.log.error
+		
+		
+		
+		
+		
+fund trasner 1000 rs
+customer care : 11-Mar-21 2PM-6PM error 
+
+21313: Failing fund_transer_Madhu_2343244
+
+
+info : 
+
+		
+Paytm: 
+Busticket : 
+
+login : controller-service-dao  database
+
+
+

@@ -1,0 +1,116 @@
+Applications:
+================
+Desktops         : C, C++ .Net
+Web applications : Python/Java/.Net 
+client - server 
+ 
+Desktop applications : Software installed in local system 
+
+Web applications  
+-----------------
+client  --> server 
+enduser --> code deployed in remote machine 
+             www.paytm.com   
+			 12.43.23.14  machine project deployment
+
+
+static page   : login page,
+                welcome page For any user
+			   
+dynamic page  : home page 
+
+Paytm View Profile:
+--------------------
+Request URL   : https://paytm.com/v1/api/wallet/customuserbalance
+Request Method: GET
+Payload: json*/xml/text/zip file 
+
+Using frameworks flask/django : 
+map the request url,request method with associated python function/class
+
+
+API CALL :
+============
+1.	Request URL      : https://paytm.com/papi/v1/expresscart/verify    
+														mapping in flask/django
+2.	Request Method   : POST
+
+3.  Payload			 :
+						{"cart_items":[{"product_id":322717328,
+										"qty":1,
+										"configuration":{"price":"100",
+														"recharge_number":"7406900500"
+														},
+										"meta_data":{"operator":"Vodafone Idea",
+													 "circle":"Karnataka",
+													 "productLength":1,
+													 }
+										}
+									  ]
+						}
+						
+Resposne : True False  
+           
+		 
+Story : 
+-------
+1. Requirement Gathering:
+--------------------------
+Description : emp detials(eid,name,sal,office,addr,mobile,mailid), 
+			  save database 
+
+
+UI     <-- API Call -->   Backend
+
+CRUD 
+====
+x = 10 # Create 
+print(x) # Retrieve
+
+http request methods : GET        POST    PUT      PATCH     DELETE 
+                       Retrieval  Create  Update   Update    Delete
+
+API:
+------
+Request URL    : http://oracle.com/api/emp_register/100 
+Request Method : POST 
+Payload        : {"eid":100,"name":"MadhuNettem","sal":1000} #mostly json format,xml,file 
+
+Diff frameworks: Flask, Django, Pyramid, Bottle, FAST API
+
+Core Python
+ 
+2. Analysis:
+---------------
+Functional :  Existing functionality related to story
+              REGISTER
+               
+
+
+Technical :  Existing code implementation
+
+			code changes where to do 
+			UI  --> Controller.py   -->  Service.py  -->   DAO.py  -->    Database 
+			         -------------------------------------------------------------
+			   
+			 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

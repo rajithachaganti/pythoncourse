@@ -1,0 +1,57 @@
+
+Micro servies architecture:
+=============================
+collection parser : Flask
+parser   : Flask 
+config service : Java
+
+
+service1   --rest api -->  service2
+python             				java 
+Windows            				Linux 
+
+
+"requests" module will be used to interact from one service to other service 
+
+
+Flask_REST2:
+-----------
+Enduser                    Flask_REST2 
+client   ----------------> server            ------------------------> jsonplaceholder
+Postman                     backend python 
+									client                ---------->  server
+
+
+client          ---------API Call-------->  server     
+												backend python code 
+GUI 										    Flask with REST 
+other app(rpa,python,java)                             client   ---------------> jsonplaceholder (server)
+Postman*                                             
+                                                    
+
+enduser   --->   googlepay   --- hdfcbank
+client           server 
+					 client         server
+
+
+Mobilebill:
+------------
+
+End user  -----------> PAYTM    --------REST API call --------> VODAFONE
+mobileno 
+circle 
+operator 
+ 
+ client                server 
+                           client                               server 
+						   
+						   
+						   
+R1 --- web application call --->     client to server   --> Enduser to backend
+R2 --- Backend service         ------------------>  External Service
+		(Python with Flask)                              (Java service)
+		
+
+
+
+
