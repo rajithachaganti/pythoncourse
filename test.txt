@@ -12,5 +12,8 @@ git config --global --unset user.email
 git config --list
 git config --global credential.helper manager --->to add git account for authentication
 git branch -a -->to see all branches in repository
+git fetch -->to see newly created branches and files
 git checkout branchname -->to enter into that branch
+git pull -->to pull the code changes
+
 
