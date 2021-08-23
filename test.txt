@@ -9,5 +9,8 @@ git push -->to push files to git repository
 git config --global user.email "rajithachaganti97@gmail.com"
 git config --global user.name "rajithachaganti"
 git config --global --unset user.email
- git config --list
- git config --global credential.helper manager --->to add git account for authentication
+git config --list
+git config --global credential.helper manager --->to add git account for authentication
+git branch -a -->to see all branches in repository
+git checkout branchname -->to enter into that branch
+
