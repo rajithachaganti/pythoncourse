@@ -1,0 +1,13 @@
+pwd -->to check present working directory
+git clone url -->to copy code from git repository
+git status -->to check files in repository 
+git add . -->to add all files at a time
+git add "file name" -->to add specific file
+git commit -m "statement" -->to commit files
+git push -->to push files to git repository 
+=============
+git config --global user.email "rajithachaganti97@gmail.com"
+git config --global user.name "rajithachaganti"
+git config --global --unset user.email
+ git config --list
+ git config --global credential.helper manager --->to add git account for authentication
