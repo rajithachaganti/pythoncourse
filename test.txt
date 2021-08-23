@@ -11,3 +11,4 @@ git config --global user.name "rajithachaganti"
 git config --global --unset user.email
  git config --list
  git config --global credential.helper manager --->to add git account for authentication
+

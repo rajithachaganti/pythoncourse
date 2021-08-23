@@ -1,6 +1,0 @@
-1) Display employee details whose employee name contains Letter "S" and also display employee details whose location is "NEW YORK"
-2) Display employee details whole employee name starts with "A" or fourth letter shoud be "M" and also display employee details whose location is "NEW YORK" and hiredate between "01-JAN-1981" AND "31-DEC-1981"
-3) Display employee name and their manager name whose employee name ending with letter "S" and manager name either 4th letter should be "T" or manager name 4th letter should be letter "G"
-4) display employee details whose salary between 800 AND 2000 and also Display employee details department no in 10 and 30
-5) display employee details whose salary IS 3000 Display employee details department Employee name starts with letter "A" or sal is 3000
-6) Display employee details whose employee name starts with letter "A" and also display employee sal whose sal is 3000 (Using Except)
